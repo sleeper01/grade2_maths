@@ -136,7 +136,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 显示第一张幻灯片
     showSlide(0, 0);
+    
+    // 添加返回首页按钮
+    addHomeButton();
 });
+
+/**
+ * 添加返回首页按钮
+ */
+function addHomeButton() {
+    // 检查是否已存在
+    if (document.querySelector('.home-btn')) return;
+    
+    const homeBtn = document.createElement('a');
+    homeBtn.href = '../index.html';
+    homeBtn.className = 'home-btn';
+    homeBtn.innerHTML = '<span class="home-icon">🏠</span> 返回首页';
+    homeBtn.title = '返回首页';
+    document.body.appendChild(homeBtn);
+}
 
 // 导出函数供单元脚本使用
 window.goToSlide = goToSlide;
