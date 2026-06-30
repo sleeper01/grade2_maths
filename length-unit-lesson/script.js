@@ -41,10 +41,6 @@ function goToSection(idx) {
         else if (i < idx) d.classList.add('completed');
     });
 
-    // 更新顶部导航按钮
-    $('#btnPrev').disabled = idx === 0;
-    $('#btnNext').disabled = idx === state.maxSection;
-
     state.currentSection = idx;
     state.currentSlide = 0; // 进入新章节时重置幻灯片
 
@@ -426,10 +422,6 @@ function triggerMiniConfetti(el) {
 
 /* ============= 绑定事件 ============= */
 function bindEvents() {
-    // 顶部导航：上一节 / 下一节
-    $('#btnPrev').addEventListener('click', () => goToSection(state.currentSection - 1));
-    $('#btnNext').addEventListener('click', () => goToSection(state.currentSection + 1));
-
     // 进度点点击
     $$('.dot').forEach((dot, idx) => {
         dot.addEventListener('click', () => goToSection(idx));

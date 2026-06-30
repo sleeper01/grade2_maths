@@ -70,9 +70,6 @@ function goToSection(idx) {
         else if (i < idx) d.classList.add('completed');
     });
 
-    $('#btnPrev').disabled = idx === 0;
-    $('#btnNext').disabled = idx === state.maxSection;
-
     state.currentSection = idx;
     state.currentSlide = 0;
     resetSlides(idx);
@@ -430,14 +427,6 @@ function triggerConfettiLight(targetEl) {
 
 /* ============= 事件绑定 ============= */
 function bindEvents() {
-    // 顶部导航按钮
-    $('#btnPrev').onclick = () => {
-        if (state.currentSection > 0) goToSection(state.currentSection - 1);
-    };
-    $('#btnNext').onclick = () => {
-        if (state.currentSection < state.maxSection) goToSection(state.currentSection + 1);
-    };
-
     // 进度点点击
     $$('.dot').forEach(dot => {
         dot.onclick = () => {
