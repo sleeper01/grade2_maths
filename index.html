@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二年级数学上册 - 互动课件</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .welcome-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .welcome-card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .welcome-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .units-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .unit-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .unit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .unit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .unit-card:hover::before {
+            height: 8px;
+        }
+
+        .unit-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .unit-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+
+        .unit-card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        .unit-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .features {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+
+        .features h2 {
+            color: #667eea;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .feature-item h4 {
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .feature-item p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .units-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 二年级数学上册</h1>
+            <p>人教版配套互动课件 | 让学习更有趣</p>
+        </header>
+
+        <div class="welcome-card">
+            <h2>🎉 欢迎来到数学课堂！</h2>
+            <p>
+                这里有 8 个精彩的数学单元，每个单元都有生动的动画、有趣的互动练习和详细的讲解。
+                点击下方你感兴趣的单元，开始学习吧！
+            </p>
+        </div>
+
+        <div class="units-grid">
+            <a href="length-unit-lesson/" class="unit-card">
+                <span class="unit-icon">📏</span>
+                <span class="unit-number">第 1 单元</span>
+                <h3>长度单位</h3>
+                <p>认识厘米和米，学习用尺子测量物体的长度</p>
+            </a>
+
+            <a href="addition-subtraction-100/" class="unit-card">
+                <span class="unit-icon">➕➖</span>
+                <span class="unit-number">第 2 单元</span>
+                <h3>100 以内的加减法</h3>
+                <p>学习两位数的加减法运算，掌握竖式计算</p>
+            </a>
+
+            <a href="angles-intro/" class="unit-card">
+                <span class="unit-icon">📐</span>
+                <span class="unit-number">第 3 单元</span>
+                <h3>角的初步认识</h3>
+                <p>认识角、直角、锐角、钝角，学习画角</p>
+            </a>
+
+            <a href="multiplication-intro/" class="unit-card">
+                <span class="unit-icon">✖️</span>
+                <span class="unit-number">第 4 单元</span>
+                <h3>表内乘法（一）</h3>
+                <p>学习 2-6 的乘法口诀，理解乘法的意义</p>
+            </a>
+
+            <a href="multiplication-789/" class="unit-card">
+                <span class="unit-icon">🔢</span>
+                <span class="unit-number">第 5 单元</span>
+                <h3>表内乘法（二）</h3>
+                <p>学习 7-9 的乘法口诀，熟练运用口诀计算</p>
+            </a>
+
+            <a href="observe-objects/" class="unit-card">
+                <span class="unit-icon">👀</span>
+                <span class="unit-number">第 6 单元</span>
+                <h3>观察物体</h3>
+                <p>从不同方向观察物体，培养空间观念</p>
+            </a>
+
+            <a href="time-telling/" class="unit-card">
+                <span class="unit-icon">🕐</span>
+                <span class="unit-number">第 7 单元</span>
+                <h3>认识时间</h3>
+                <p>认识钟表，学习认读整时和几时几分</p>
+            </a>
+
+            <a href="math-broad-match/" class="unit-card">
+                <span class="unit-icon">🎯</span>
+                <span class="unit-number">第 8 单元</span>
+                <h3>数学广角 - 搭配</h3>
+                <p>学习简单的排列组合，解决搭配问题</p>
+            </a>
+        </div>
+
+        <div class="features">
+            <h2>✨ 课件特点</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">🎨</span>
+                    <h4>生动有趣</h4>
+                    <p>色彩鲜艳，动画丰富</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🖱️</span>
+                    <h4>互动性强</h4>
+                    <p>点击操作，即时反馈</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">📱</span>
+                    <h4>多端适配</h4>
+                    <p>电脑、平板都能用</p>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🆓</span>
+                    <h4>完全免费</h4>
+                    <p>永久免费使用</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>📖 好好学习，天天向上！</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                <a href="https://github.com/sleeper01/grade2_maths" target="_blank" class="cta-button">
+                    访问 GitHub 仓库
+                </a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
