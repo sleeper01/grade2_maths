@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>长度单位 - 二年级上册第一单元</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-title">📐 长度单位</div>
+        <div class="progress-dots">
+            <span class="dot active" data-section="0"></span>
+            <span class="dot" data-section="1"></span>
+            <span class="dot" data-section="2"></span>
+            <span class="dot" data-section="3"></span>
+            <span class="dot" data-section="4"></span>
+            <span class="dot" data-section="5"></span>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn-nav btn-prev" id="btnPrev">← 上一节</button>
+            <button class="btn-nav btn-next" id="btnNext">下一节 →</button>
+        </div>
+    </header>
+    <main class="main-content">
+        <!-- ============= 第 0 节: 欢迎封面 ============= -->
+        <section class="section section-cover active" data-section="0">
+            <div class="cover-content">
+                <div class="bear-wrap">
+                    <svg viewBox="0 0 200 200" class="bear-svg">
+                        <circle cx="55" cy="55" r="22" fill="#B07A4A"/>
+                        <circle cx="55" cy="55" r="13" fill="#FFD9B5"/>
+                        <circle cx="145" cy="55" r="22" fill="#B07A4A"/>
+                        <circle cx="145" cy="55" r="13" fill="#FFD9B5"/>
+                        <circle cx="100" cy="105" r="65" fill="#B07A4A"/>
+                        <ellipse cx="100" cy="118" rx="42" ry="35" fill="#FFD9B5"/>
+                        <circle cx="80" cy="100" r="5" fill="#2C3E50"/>
+                        <circle cx="120" cy="100" r="5" fill="#2C3E50"/>
+                        <ellipse cx="100" cy="118" rx="5" ry="3.5" fill="#2C3E50"/>
+                        <path d="M 100 122 Q 90 132 85 128" stroke="#2C3E50" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <path d="M 100 122 Q 110 132 115 128" stroke="#2C3E50" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <circle cx="68" cy="120" r="7" fill="#FF9EB5" opacity="0.6"/>
+                        <circle cx="132" cy="120" r="7" fill="#FF9EB5" opacity="0.6"/>
+                    </svg>
+                </div>
+                <h1 class="cover-title">长度单位</h1>
+                <p class="cover-subtitle">二年级数学 · 上册 · 第一单元</p>
+                <div class="cover-tip">💡 家长读这句：宝宝，今天我们一起认识<strong>厘米</strong>和<strong>米</strong>，看看怎么量东西的长度。</div>
+                <button class="btn-big btn-start" id="btnStart">开始学习 🚀</button>
+            </div>
+        </section>
+
+        <!-- ============= 第 1 节: 认识厘米 ============= -->
+        <section class="section section-cm" data-section="1">
+            <div class="section-header">
+                <span class="section-tag">第 1 节</span>
+                <h2 class="section-title">🐻 认识厘米</h2>
+            </div>
+
+            <div class="slides-container">
+                <!-- 幻灯片 1.1 -->
+                <div class="slide active" data-slide="0">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🤔 比一比：哪根铅笔长？</h3>
+                        <div class="stage" id="stagePencilCompare">
+                            <div class="pencil pencil-1"><div class="pencil-tip"></div><div class="pencil-body"></div><div class="pencil-eraser"></div></div>
+                            <div class="pencil pencil-2"><div class="pencil-tip"></div><div class="pencil-body"></div><div class="pencil-eraser"></div></div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：两根铅笔只差一点点，眼睛看不准，怎么办呢？</div>
+                        <button class="btn-replay" data-target="intro-cm">↻ 重播</button>
+                    </div>
+                </div>
+
+                <!-- 幻灯片 1.2 -->
+                <div class="slide" data-slide="1">
+                    <div class="lesson-block">
+                        <h3 class="block-title">📏 1 厘米有多长？</h3>
+                        <p class="block-desc">尺子上，从 0 到 1 这一段就是 <strong>1 厘米</strong>，写作 <strong>1 cm</strong>。</p>
+                        <div class="stage">
+                            <div class="mini-ruler">
+                                <div class="ruler-track"></div>
+                                <div class="ruler-tick" style="left:0%"><span class="tick-num">0</span></div>
+                                <div class="ruler-tick highlight" style="left:20%"><span class="tick-num">1</span></div>
+                                <div class="ruler-tick" style="left:40%"><span class="tick-num">2</span></div>
+                                <div class="ruler-tick" style="left:60%"><span class="tick-num">3</span></div>
+                                <div class="ruler-tick" style="left:80%"><span class="tick-num">4</span></div>
+                                <div class="ruler-tick" style="left:100%"><span class="tick-num">5</span></div>
+                                <div class="ruler-cm-indicator">1 cm ↓</div>
+                            </div>
+                            <div class="cm-references">
+                                <div class="ref-item">📎 图钉 ≈ 1cm</div>
+                                <div class="ref-item">🔲 田字格 ≈ 1cm</div>
+                                <div class="ref-item">✏️ 铅笔头 ≈ 1cm</div>
+                            </div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：图钉那么长、田字格一边那么长，就是 1 厘米。</div>
+                    </div>
+                </div>
+
+                <!-- 幻灯片 1.3 -->
+                <div class="slide" data-slide="2">
+                    <div class="lesson-block">
+                        <h3 class="block-title">✏️ 用尺子量铅笔</h3>
+                        <div class="stage" id="stageMeasure">
+                            <div class="pencil-horizontal"><div class="pencil-tip-h"></div><div class="pencil-body-h"></div><div class="pencil-eraser-h"></div></div>
+                            <div class="measure-ruler" id="measureRuler"><div class="ruler-body-h"></div></div>
+                            <div class="measure-result" id="measureResult">这支铅笔长 <strong>7</strong> 厘米</div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：把尺子的 0 对齐铅笔的左端，看右端是几，这根铅笔就是几厘米。</div>
+                        <button class="btn-replay" data-target="cm-measure">↻ 重播</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 幻灯片导航 -->
+            <div class="slide-nav">
+                <button class="btn-slide btn-slide-prev" data-action="prev-slide">← 上一页</button>
+                <div class="slide-counter"><span class="current-slide">1</span> / <span class="total-slides">3</span></div>
+                <button class="btn-slide btn-slide-next" data-action="next-slide">下一页 →</button>
+            </div>
+
+            <button class="btn-next-section" data-next="2" style="display:none;">下一节：认识米 →</button>
+        </section>
+
+        <!-- ============= 第 2 节: 认识米 ============= -->
+        <section class="section section-meter" data-section="2">
+            <div class="section-header">
+                <span class="section-tag">第 2 节</span>
+                <h2 class="section-title">🐻 认识米</h2>
+            </div>
+
+            <div class="slides-container">
+                <!-- 幻灯片 2.1 -->
+                <div class="slide active" data-slide="0">
+                    <div class="lesson-block">
+                        <h3 class="block-title">📐 量一量教室里的黑板</h3>
+                        <p class="block-desc">黑板这么长，用厘米尺子一把一把量，要量 <strong>100 次</strong>，太慢了！</p>
+                        <div class="stage">
+                            <div class="blackboard"><div class="bb-text">黑 板</div></div>
+                            <div class="tiny-ruler">15cm</div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：量小东西用厘米，量大东西就要用更大的单位 —— 米。</div>
+                    </div>
+                </div>
+
+                <!-- 幻灯片 2.2 -->
+                <div class="slide" data-slide="1">
+                    <div class="lesson-block">
+                        <h3 class="block-title">📏 1 米有多长？</h3>
+                        <p class="block-desc">小学生伸开两臂大约就是 <strong>1 米</strong>，写作 <strong>1 m</strong>。</p>
+                        <div class="stage">
+                            <div class="meter-ruler">
+                                <div class="meter-body">
+                                    <span class="meter-mark" style="left:0%">0</span>
+                                    <span class="meter-mark" style="left:25%">25</span>
+                                    <span class="meter-mark" style="left:50%">50</span>
+                                    <span class="meter-mark" style="left:75%">75</span>
+                                    <span class="meter-mark" style="left:100%">100 cm</span>
+                                </div>
+                                <div class="meter-label">1 米 = 100 厘米</div>
+                            </div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：让宝宝伸开手臂，比一比是不是差不多 1 米？</div>
+                    </div>
+                </div>
+
+                <!-- 幻灯片 2.3 -->
+                <div class="slide" data-slide="2">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🧱 1 米里面有几个 1 厘米？</h3>
+                        <p class="block-desc">让我们把 1 厘米的小方块一个一个放进 1 米的尺子里：</p>
+                        <div class="stage">
+                            <div class="fill-counter">已放了 <strong id="counterNum">0</strong> 个 1 厘米</div>
+                            <div class="fill-track" id="fillTrack"></div>
+                            <div class="fill-conclusion" id="fillConclusion">1 米 = 100 厘米 🎉</div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：1 个 1 厘米，2 个 1 厘米...数到 100，原来 1 米里面有 100 个 1 厘米。</div>
+                        <button class="btn-replay" data-target="meter-fill">↻ 重播填充动画</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-nav">
+                <button class="btn-slide btn-slide-prev" data-action="prev-slide">← 上一页</button>
+                <div class="slide-counter"><span class="current-slide">1</span> / <span class="total-slides">3</span></div>
+                <button class="btn-slide btn-slide-next" data-action="next-slide">下一页 →</button>
+            </div>
+
+            <button class="btn-next-section" data-next="3" style="display:none;">下一节：认识线段 →</button>
+        </section>
+
+        <!-- ============= 第 3 节: 认识线段 ============= -->
+        <section class="section section-line" data-section="3">
+            <div class="section-header">
+                <span class="section-tag">第 3 节</span>
+                <h2 class="section-title">🐻 认识线段</h2>
+            </div>
+
+            <div class="slides-container">
+                <!-- 幻灯片 3.1 -->
+                <div class="slide active" data-slide="0">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🔍 找一找：什么是线段？</h3>
+                        <p class="block-desc">线段有 <strong>两个特点</strong>：① <strong>直直的</strong> ② <strong>有两个端点</strong></p>
+                        <div class="stage">
+                            <div class="line-item">
+                                <svg viewBox="0 0 200 60" class="line-svg"><path d="M 10 30 Q 50 5 100 30 T 190 30" stroke="#FF6B9D" stroke-width="4" fill="none"/></svg>
+                                <div class="line-label">弯弯的 ❌</div>
+                            </div>
+                            <div class="line-item">
+                                <svg viewBox="0 0 200 60" class="line-svg"><line x1="10" y1="30" x2="190" y2="30" stroke="#4D96FF" stroke-width="4"/></svg>
+                                <div class="line-label">直直的，但没端点 ❌</div>
+                            </div>
+                            <div class="line-item">
+                                <svg viewBox="0 0 200 60" class="line-svg">
+                                    <circle cx="10" cy="30" r="6" fill="#6BCB77"/>
+                                    <line x1="10" y1="30" x2="190" y2="30" stroke="#6BCB77" stroke-width="4"/>
+                                    <circle cx="190" cy="30" r="6" fill="#6BCB77"/>
+                                </svg>
+                                <div class="line-label">直直的 + 两个端点 ✅ 这就是<strong>线段</strong>！</div>
+                            </div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：直直的、两头都有小圆点的，就是线段。</div>
+                    </div>
+                </div>
+
+                <!-- 幻灯片 3.2 -->
+                <div class="slide" data-slide="1">
+                    <div class="lesson-block">
+                        <h3 class="block-title">✏️ 画一条线段</h3>
+                        <div class="stage">
+                            <div class="draw-area">
+                                <div class="endpoint start"></div>
+                                <div class="endpoint end"></div>
+                                <div class="draw-line" id="drawLine"></div>
+                                <div class="draw-pencil" id="drawPencil">✏️</div>
+                            </div>
+                            <div class="draw-result" id="drawResult">画好啦！这条线段长 <strong>8</strong> 厘米</div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：先点起点，再点终点，一条线段就画好啦。</div>
+                        <button class="btn-replay" data-target="line-draw">↻ 重播</button>
+                    </div>
+                </div>
+
+                <!-- 幻灯片 3.3 -->
+                <div class="slide" data-slide="2">
+                    <div class="lesson-block">
+                        <h3 class="block-title">📏 量一量线段</h3>
+                        <p class="block-desc">点击下面的线段，看看它有多长？</p>
+                        <div class="stage">
+                            <div class="measure-line" data-length="5"><div class="ml-end"></div><div class="ml-body"></div><div class="ml-end"></div><div class="ml-length"></div></div>
+                            <div class="measure-line" data-length="8"><div class="ml-end"></div><div class="ml-body"></div><div class="ml-end"></div><div class="ml-length"></div></div>
+                            <div class="measure-line" data-length="12"><div class="ml-end"></div><div class="ml-body"></div><div class="ml-end"></div><div class="ml-length"></div></div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：点击线段就会显示长度，让宝宝自己点一点。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-nav">
+                <button class="btn-slide btn-slide-prev" data-action="prev-slide">← 上一页</button>
+                <div class="slide-counter"><span class="current-slide">1</span> / <span class="total-slides">3</span></div>
+                <button class="btn-slide btn-slide-next" data-action="next-slide">下一页 →</button>
+            </div>
+
+            <button class="btn-next-section" data-next="4" style="display:none;">下一节：选单位练习 →</button>
+        </section>
+
+        <!-- ============= 第 4 节: 互动练习 ============= -->
+        <section class="section section-practice" data-section="4">
+            <div class="section-header">
+                <span class="section-tag">🎮 第 4 节</span>
+                <h2 class="section-title">小练习：选一选单位</h2>
+            </div>
+            <p class="section-desc">量下面的东西，用 <strong>厘米</strong> 还是 <strong>米</strong> 呢？点击你的答案！</p>
+            <div class="quiz-list" id="quizList"></div>
+            <div class="quiz-summary" id="quizSummary" style="display:none;">
+                <div class="summary-emoji">🎉</div>
+                <h3>太棒了！</h3>
+                <p>宝宝答对了 <strong id="correctCount">0</strong> 道题！</p>
+                <button class="btn-big btn-restart" id="btnRestart">再做一次 🔁</button>
+            </div>
+            <button class="btn-next-section" data-next="5" id="btnGoSummary" style="display:none;">看单元小结 →</button>
+        </section>
+
+        <!-- ============= 第 5 节: 单元小结 ============= -->
+        <section class="section section-summary" data-section="5">
+            <div class="section-header">
+                <span class="section-tag">🌟 单元小结</span>
+                <h2 class="section-title">今天我们学了什么？</h2>
+            </div>
+            <div class="summary-cards">
+                <div class="summary-card card-yellow"><div class="card-icon">📏</div><h4>厘米 (cm)</h4><p>量较短的物体：铅笔、橡皮、书本...</p></div>
+                <div class="summary-card card-green"><div class="card-icon">📐</div><h4>米 (m)</h4><p>量较长的物体：黑板、门、小朋友身高...</p></div>
+                <div class="summary-card card-blue"><div class="card-icon">🧮</div><h4>1 米 = 100 厘米</h4><p>记住这个换算关系哦！</p></div>
+                <div class="summary-card card-pink"><div class="card-icon">📊</div><h4>线段</h4><p>直直的 + 两个端点，可以测量长度</p></div>
+            </div>
+            <div class="parent-final-tip">
+                <h4>👨‍👩‍👧 给家长的小提示</h4>
+                <ul>
+                    <li>让孩子拿尺子量家里的铅笔、橡皮、书本（用厘米）</li>
+                    <li>让孩子张开手臂比划 1 米，感受一下</li>
+                    <li>用粉笔在地上画线段，比一比谁画的长</li>
+                    <li>生活中多问："这个有多长？用什么单位？"</li>
+                </ul>
+            </div>
+            <div class="end-celebration">
+                <div class="celebrate-emoji">🏆</div>
+                <p>宝宝完成了第一单元的学习！</p>
+                <button class="btn-big btn-restart-top" id="btnBackTop">回到封面 🔝</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="confetti-layer" id="confettiLayer"></div>
+    <script src="script.js"></script>
+</body>
+</html>

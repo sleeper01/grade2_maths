@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100以内的加法和减法 - 二年级上册第二单元</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-title">➕ 100以内的加减法</div>
+        <div class="progress-dots">
+            <span class="dot active" data-section="0"></span>
+            <span class="dot" data-section="1"></span>
+            <span class="dot" data-section="2"></span>
+            <span class="dot" data-section="3"></span>
+            <span class="dot" data-section="4"></span>
+            <span class="dot" data-section="5"></span>
+            <span class="dot" data-section="6"></span>
+        </div>
+        <div class="nav-buttons">
+            <button class="btn-nav btn-prev" id="btnPrev">← 上一节</button>
+            <button class="btn-nav btn-next" id="btnNext">下一节 →</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- ============= 第 0 节: 欢迎封面 ============= -->
+        <section class="section section-cover active" data-section="0">
+            <div class="cover-content">
+                <div class="bear-wrap">
+                    <svg viewBox="0 0 200 200" class="bear-svg">
+                        <circle cx="55" cy="55" r="22" fill="#B07A4A"/>
+                        <circle cx="55" cy="55" r="13" fill="#FFD9B5"/>
+                        <circle cx="145" cy="55" r="22" fill="#B07A4A"/>
+                        <circle cx="145" cy="55" r="13" fill="#FFD9B5"/>
+                        <circle cx="100" cy="105" r="65" fill="#B07A4A"/>
+                        <ellipse cx="100" cy="118" rx="42" ry="35" fill="#FFD9B5"/>
+                        <circle cx="80" cy="100" r="5" fill="#2C3E50"/>
+                        <circle cx="120" cy="100" r="5" fill="#2C3E50"/>
+                        <ellipse cx="100" cy="118" rx="5" ry="3.5" fill="#2C3E50"/>
+                        <path d="M 100 122 Q 90 132 85 128" stroke="#2C3E50" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <path d="M 100 122 Q 110 132 115 128" stroke="#2C3E50" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <circle cx="68" cy="120" r="7" fill="#FF9EB5" opacity="0.6"/>
+                        <circle cx="132" cy="120" r="7" fill="#FF9EB5" opacity="0.6"/>
+                        <text x="155" y="80" font-size="32">🎓</text>
+                    </svg>
+                </div>
+                <h1 class="cover-title">100以内的加法和减法</h1>
+                <p class="cover-subtitle">二年级数学 · 上册 · 第二单元</p>
+                <div class="cover-tip">💡 家长读这句：宝宝，今天我们一起学习<strong>100以内的加减法</strong>，用小棒和方块帮你算得又快又准！</div>
+                <button class="btn-big btn-start" id="btnStart">开始学习 🚀</button>
+            </div>
+        </section>
+
+        <!-- ============= 第 1 节: 整十数加减整十数 ============= -->
+        <section class="section" data-section="1">
+            <div class="section-header">
+                <span class="section-tag">第 1 节</span>
+                <h2 class="section-title">🎯 整十数加减整十数</h2>
+            </div>
+
+            <div class="slides-container">
+                <!-- 1.1 情境引入 -->
+                <div class="slide active" data-slide="0">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🌳 情境：小熊买树苗</h3>
+                        <p class="block-desc">小熊买了 <strong>30 棵</strong>松树苗，又买了 <strong>20 棵</strong>柏树苗。一共有多少棵？</p>
+                        <div class="stage" id="stageTensIntro">
+                            <div class="trees trees-30" id="trees30"></div>
+                            <div class="plus-sign">+</div>
+                            <div class="trees trees-20" id="trees20"></div>
+                            <div class="equals-sign">=</div>
+                            <div class="trees trees-q" id="treesQ"></div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：先数数看，3捆加2捆，是几捆呀？</div>
+                    </div>
+                </div>
+
+                <!-- 1.2 小棒演示 -->
+                <div class="slide" data-slide="1">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🧮 用小棒算：30 + 20</h3>
+                        <p class="block-desc">把 10 根捆成一捆，<strong>3 捆 + 2 捆 = 5 捆</strong>，就是 <strong>50</strong>！</p>
+                        <div class="stage" id="stageTensAdd">
+                            <div class="sticks-row">
+                                <div class="bundle-label">30 =</div>
+                                <div class="bundles" id="bundles30">
+                                    <div class="bundle"></div><div class="bundle"></div><div class="bundle"></div>
+                                </div>
+                            </div>
+                            <div class="calc-line plus-line">+</div>
+                            <div class="sticks-row">
+                                <div class="bundle-label">20 =</div>
+                                <div class="bundles" id="bundles20">
+                                    <div class="bundle"></div><div class="bundle"></div>
+                                </div>
+                            </div>
+                            <div class="calc-line equals-line">=</div>
+                            <div class="sticks-row result-row">
+                                <div class="bundle-label">？=</div>
+                                <div class="bundles" id="bundlesResult">
+                                    <div class="bundle"></div><div class="bundle"></div><div class="bundle"></div><div class="bundle"></div><div class="bundle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-pop" id="resultTensAdd">30 + 20 = <span class="big-num">50</span></div>
+                        <div class="parent-tip">💡 家长读这句：3+2=5，所以 30+20=50，末尾的 0 不变！</div>
+                        <button class="btn-replay" data-target="tens-add">↻ 重播</button>
+                    </div>
+                </div>
+
+                <!-- 1.3 减法与练习 -->
+                <div class="slide" data-slide="2">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🍰 减法：50 - 20 = ?</h3>
+                        <p class="block-desc"><strong>5 捆</strong>拿走 <strong>2 捆</strong>，还剩 <strong>3 捆</strong>，就是 <strong>30</strong>！</p>
+                        <div class="stage" id="stageTensSub">
+                            <div class="sticks-row">
+                                <div class="bundle-label">50 =</div>
+                                <div class="bundles" id="subBundles50">
+                                    <div class="bundle"></div><div class="bundle"></div><div class="bundle"></div><div class="bundle"></div><div class="bundle"></div>
+                                </div>
+                            </div>
+                            <div class="calc-line minus-line">−</div>
+                            <div class="sticks-row">
+                                <div class="bundle-label">20 =</div>
+                                <div class="bundles" id="subBundles20">
+                                    <div class="bundle"></div><div class="bundle"></div>
+                                </div>
+                            </div>
+                            <div class="calc-line equals-line">=</div>
+                            <div class="result-pop" id="resultTensSub">50 − 20 = <span class="big-num">30</span></div>
+                        </div>
+                        <div class="quick-quiz">
+                            <div class="qq-title">⚡ 速算小挑战</div>
+                            <div class="qq-row">
+                                <span class="qq-q">40 + 30 = </span><span class="qq-a">70</span>
+                            </div>
+                            <div class="qq-row">
+                                <span class="qq-q">60 − 40 = </span><span class="qq-a">20</span>
+                            </div>
+                            <div class="qq-row">
+                                <span class="qq-q">80 − 50 = </span><span class="qq-a">30</span>
+                            </div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：末尾是 0 的数，先算 0 前面的数，再把 0 加回去！</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 幻灯片导航 -->
+            <div class="slide-nav">
+                <button class="btn-slide btn-slide-prev" data-action="prev">←</button>
+                <div class="slide-counter"><span class="cur-slide">1</span> / <span class="total-slides">3</span></div>
+                <button class="btn-slide btn-slide-next" data-action="next">→</button>
+            </div>
+        </section>
+
+        <!-- ============= 第 2 节: 两位数加减一位数（不进位/不退位） ============= -->
+        <section class="section" data-section="2">
+            <div class="section-header">
+                <span class="section-tag">第 2 节</span>
+                <h2 class="section-title">🍎 两位数 ± 一位数（不进位）</h2>
+            </div>
+
+            <div class="slides-container">
+                <!-- 2.1 方块图示 -->
+                <div class="slide active" data-slide="0">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🍎 情境：小熊分苹果</h3>
+                        <p class="block-desc">小熊有 <strong>23 个</strong>苹果，又摘了 <strong>4 个</strong>。现在一共有多少个？</p>
+                        <div class="stage" id="stageUnitsIntro">
+                            <div class="blocks-row">
+                                <div class="ten-block" data-ten="2"></div>
+                                <div class="one-block" data-one="3"></div>
+                                <span class="num-tag">23</span>
+                            </div>
+                            <div class="calc-line plus-line">+</div>
+                            <div class="blocks-row">
+                                <div class="one-block only-one" data-one="4"></div>
+                                <span class="num-tag">4</span>
+                            </div>
+                            <div class="calc-line equals-line">=</div>
+                            <div class="blocks-row" id="unitsResult"></div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：注意看，个位的 3+4=7，没超过 10，不进位！</div>
+                    </div>
+                </div>
+
+                <!-- 2.2 分步计算 -->
+                <div class="slide" data-slide="1">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🪜 分步算：23 + 4</h3>
+                        <p class="block-desc">把 23 拆成 <strong>20 和 3</strong>，先算 <strong>3 + 4 = 7</strong>，再算 <strong>20 + 7 = 27</strong>。</p>
+                        <div class="step-calc" id="stepCalc1">
+                            <div class="step-line">
+                                <span class="step-tag">第 1 步</span>
+                                <span class="step-eq">3 + 4 = <strong class="hl-yellow">7</strong></span>
+                            </div>
+                            <div class="step-line">
+                                <span class="step-tag">第 2 步</span>
+                                <span class="step-eq">20 + 7 = <strong class="hl-yellow">27</strong></span>
+                            </div>
+                        </div>
+                        <div class="result-pop" id="resultUnitsAdd">23 + 4 = <span class="big-num">27</span></div>
+                        <div class="parent-tip">💡 家长读这句：十位不变，只算个位就好，简单吧？</div>
+                    </div>
+                </div>
+
+                <!-- 2.3 减法 -->
+                <div class="slide" data-slide="2">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🦆 减法：56 − 3 = ?</h3>
+                        <p class="block-desc">小熊有 <strong>56 只</strong>鸭子，送走 <strong>3 只</strong>，还剩多少只？</p>
+                        <div class="step-calc">
+                            <div class="step-line">
+                                <span class="step-tag">第 1 步</span>
+                                <span class="step-eq">6 − 3 = <strong class="hl-pink">3</strong></span>
+                            </div>
+                            <div class="step-line">
+                                <span class="step-tag">第 2 步</span>
+                                <span class="step-eq">50 + 3 = <strong class="hl-pink">53</strong></span>
+                            </div>
+                        </div>
+                        <div class="result-pop">56 − 3 = <span class="big-num">53</span></div>
+                        <div class="quick-quiz">
+                            <div class="qq-title">⚡ 速算小挑战</div>
+                            <div class="qq-row"><span class="qq-q">35 + 4 = </span><span class="qq-a">39</span></div>
+                            <div class="qq-row"><span class="qq-q">48 − 5 = </span><span class="qq-a">43</span></div>
+                            <div class="qq-row"><span class="qq-q">72 + 6 = </span><span class="qq-a">78</span></div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：个位够减，十位不变，像玩搭积木一样简单！</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-nav">
+                <button class="btn-slide btn-slide-prev" data-action="prev">←</button>
+                <div class="slide-counter"><span class="cur-slide">1</span> / <span class="total-slides">3</span></div>
+                <button class="btn-slide btn-slide-next" data-action="next">→</button>
+            </div>
+        </section>
+
+        <!-- ============= 第 3 节: 两位数加减一位数（进位/退位） ============= -->
+        <section class="section" data-section="3">
+            <div class="section-header">
+                <span class="section-tag">第 3 节</span>
+                <h2 class="section-title">🎢 两位数 ± 一位数（进位/退位）</h2>
+            </div>
+
+            <div class="slides-container">
+                <!-- 3.1 进位加法 -->
+                <div class="slide active" data-slide="0">
+                    <div class="lesson-block">
+                        <h3 class="block-title">⚠️ 难题来了：28 + 5</h3>
+                        <p class="block-desc">个位 <strong>8 + 5 = 13</strong>，超过 10 啦！怎么办？</p>
+                        <div class="stage" id="stageCarryAdd">
+                            <div class="carry-demo">
+                                <div class="carry-row">
+                                    <div class="carry-digit carry-ones"></div>
+                                    <div class="carry-arrow">↑</div>
+                                    <div class="carry-explain">满 10 进 1</div>
+                                </div>
+                                <div class="carry-numbers">
+                                    <div class="num-cell tens-cell">2</div>
+                                    <div class="num-cell ones-cell hl-red">8</div>
+                                </div>
+                                <div class="calc-line plus-line">+</div>
+                                <div class="carry-numbers">
+                                    <div class="num-cell"></div>
+                                    <div class="num-cell ones-cell hl-red">5</div>
+                                </div>
+                                <div class="calc-line equals-line">=</div>
+                                <div class="carry-numbers">
+                                    <div class="num-cell tens-cell">3</div>
+                                    <div class="num-cell ones-cell">3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-pop">28 + 5 = <span class="big-num">33</span></div>
+                        <div class="parent-tip">💡 家长读这句：8+5=13，把 3 留下，1 进到十位！</div>
+                    </div>
+                </div>
+
+                <!-- 3.2 分步：凑十法 -->
+                <div class="slide" data-slide="1">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🪄 凑十法：28 + 5</h3>
+                        <p class="block-desc">把 5 分成 <strong>2 和 3</strong>：先算 <strong>8 + 2 = 10</strong>，再算 <strong>10 + 20 + 3 = 33</strong>。</p>
+                        <div class="step-calc">
+                            <div class="step-line">
+                                <span class="step-tag">拆 5</span>
+                                <span class="step-eq">5 = <strong class="hl-blue">2</strong> + <strong class="hl-yellow">3</strong></span>
+                            </div>
+                            <div class="step-line">
+                                <span class="step-tag">凑十</span>
+                                <span class="step-eq">8 + 2 = <strong class="hl-green">10</strong></span>
+                            </div>
+                            <div class="step-line">
+                                <span class="step-tag">合并</span>
+                                <span class="step-eq">10 + 20 + 3 = <strong class="hl-pink">33</strong></span>
+                            </div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：凑十法是把小数"借"一点给大数，凑成 10！</div>
+                    </div>
+                </div>
+
+                <!-- 3.3 退位减法 -->
+                <div class="slide" data-slide="2">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🔙 退位减法：42 − 7 = ?</h3>
+                        <p class="block-desc">个位 <strong>2 − 7</strong> 不够减！从十位 <strong>借 1 当 10</strong>，变成 <strong>12 − 7 = 5</strong>。</p>
+                        <div class="stage" id="stageBorrowSub">
+                            <div class="carry-demo">
+                                <div class="borrow-row">
+                                    <div class="borrow-digit borrow-tens"></div>
+                                    <div class="borrow-arrow">↓</div>
+                                    <div class="borrow-explain">借 1 当 10</div>
+                                </div>
+                                <div class="carry-numbers">
+                                    <div class="num-cell tens-cell hl-blue">3</div>
+                                    <div class="num-cell ones-cell hl-blue">12</div>
+                                </div>
+                                <div class="calc-line minus-line">−</div>
+                                <div class="carry-numbers">
+                                    <div class="num-cell"></div>
+                                    <div class="num-cell ones-cell">7</div>
+                                </div>
+                                <div class="calc-line equals-line">=</div>
+                                <div class="carry-numbers">
+                                    <div class="num-cell tens-cell">3</div>
+                                    <div class="num-cell ones-cell">5</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-pop">42 − 7 = <span class="big-num">35</span></div>
+                        <div class="parent-tip">💡 家长读这句：个位不够减，就跟十位"借"一个 10！</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-nav">
+                <button class="btn-slide btn-slide-prev" data-action="prev">←</button>
+                <div class="slide-counter"><span class="cur-slide">1</span> / <span class="total-slides">3</span></div>
+                <button class="btn-slide btn-slide-next" data-action="next">→</button>
+            </div>
+        </section>
+
+        <!-- ============= 第 4 节: 两位数加减两位数 ============= -->
+        <section class="section" data-section="4">
+            <div class="section-header">
+                <span class="section-tag">第 4 节</span>
+                <h2 class="section-title">📊 两位数 ± 两位数</h2>
+            </div>
+
+            <div class="slides-container">
+                <!-- 4.1 竖式加法 -->
+                <div class="slide active" data-slide="0">
+                    <div class="lesson-block">
+                        <h3 class="block-title">📝 竖式：35 + 24 = ?</h3>
+                        <p class="block-desc">相同数位对齐，从<strong>个位</strong>开始算。</p>
+                        <div class="stage">
+                            <div class="vertical-calc" id="vAdd1">
+                                <div class="v-row"><span class="v-num">3</span><span class="v-num">5</span></div>
+                                <div class="v-row v-plus"><span class="v-plus-sign">+</span><span class="v-num">2</span><span class="v-num">4</span></div>
+                                <div class="v-line"></div>
+                                <div class="v-row v-result"><span class="v-num">5</span><span class="v-num">9</span></div>
+                            </div>
+                            <div class="v-explain">
+                                <div class="v-step">个位：5 + 4 = 9</div>
+                                <div class="v-step">十位：3 + 2 = 5</div>
+                            </div>
+                        </div>
+                        <div class="result-pop">35 + 24 = <span class="big-num">59</span></div>
+                        <div class="parent-tip">💡 家长读这句：个位算个位，十位算十位，别忘了对齐！</div>
+                    </div>
+                </div>
+
+                <!-- 4.2 竖式进位 -->
+                <div class="slide" data-slide="1">
+                    <div class="lesson-block">
+                        <h3 class="block-title">📝 竖式进位：46 + 28</h3>
+                        <p class="block-desc">个位 6 + 8 = 14，写 4 进 1；十位 4 + 2 + 1 = 7。</p>
+                        <div class="stage">
+                            <div class="vertical-calc" id="vAdd2">
+                                <div class="v-row v-carry-row"><span class="v-num v-carry">1</span></div>
+                                <div class="v-row"><span class="v-num">4</span><span class="v-num">6</span></div>
+                                <div class="v-row v-plus"><span class="v-plus-sign">+</span><span class="v-num">2</span><span class="v-num">8</span></div>
+                                <div class="v-line"></div>
+                                <div class="v-row v-result"><span class="v-num">7</span><span class="v-num">4</span></div>
+                            </div>
+                            <div class="v-explain">
+                                <div class="v-step">个位：6 + 8 = 14 → 写 4 进 1</div>
+                                <div class="v-step">十位：4 + 2 + 1 = 7</div>
+                            </div>
+                        </div>
+                        <div class="result-pop">46 + 28 = <span class="big-num">74</span></div>
+                        <div class="parent-tip">💡 家长读这句：进位的小 1 要写在十位头上，别忘啦！</div>
+                    </div>
+                </div>
+
+                <!-- 4.3 竖式退位减法 -->
+                <div class="slide" data-slide="2">
+                    <div class="lesson-block">
+                        <h3 class="block-title">📝 竖式退位：63 − 28</h3>
+                        <p class="block-desc">个位 3 减 8 不够，十位 6 借 1 当 10，13 − 8 = 5；十位 5 − 2 = 3。</p>
+                        <div class="stage">
+                            <div class="vertical-calc" id="vSub1">
+                                <div class="v-row"><span class="v-num v-borrow">5</span><span class="v-num v-borrow">13</span></div>
+                                <div class="v-row"><span class="v-num">6</span><span class="v-num">3</span></div>
+                                <div class="v-row v-plus"><span class="v-plus-sign">−</span><span class="v-num">2</span><span class="v-num">8</span></div>
+                                <div class="v-line"></div>
+                                <div class="v-row v-result"><span class="v-num">3</span><span class="v-num">5</span></div>
+                            </div>
+                            <div class="v-explain">
+                                <div class="v-step">个位：13 − 8 = 5</div>
+                                <div class="v-step">十位：5 − 2 = 3</div>
+                            </div>
+                        </div>
+                        <div class="result-pop">63 − 28 = <span class="big-num">35</span></div>
+                        <div class="parent-tip">💡 家长读这句：被减数头上要点小圆点，提醒自己"借过了"！</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-nav">
+                <button class="btn-slide btn-slide-prev" data-action="prev">←</button>
+                <div class="slide-counter"><span class="cur-slide">1</span> / <span class="total-slides">3</span></div>
+                <button class="btn-slide btn-slide-next" data-action="next">→</button>
+            </div>
+        </section>
+
+        <!-- ============= 第 5 节: 解决问题·比多比少 ============= -->
+        <section class="section" data-section="5">
+            <div class="section-header">
+                <span class="section-tag">第 5 节</span>
+                <h2 class="section-title">🤔 解决问题 · 比多比少</h2>
+            </div>
+
+            <div class="slides-container">
+                <!-- 5.1 比多少引入 -->
+                <div class="slide active" data-slide="0">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🐰 谁多？谁少？</h3>
+                        <p class="block-desc">白兔 <strong>24 只</strong>，灰兔 <strong>17 只</strong>。白兔比灰兔多几只？</p>
+                        <div class="stage" id="stageCompare">
+                            <div class="rabbits-row">
+                                <span class="rabbit-tag">白兔</span>
+                                <div class="rabbits white-rabbits">
+                                    <span class="rabbit">🐰</span><span class="rabbit">🐰</span><span class="rabbit">🐰</span><span class="rabbit">🐰</span>
+                                    <span class="rabbit">🐰</span><span class="rabbit">🐰</span><span class="rabbit">🐰</span><span class="rabbit">🐰</span>
+                                    <span class="rabbit">🐰</span><span class="rabbit">🐰</span><span class="rabbit">🐰</span><span class="rabbit">🐰</span>
+                                    <span class="rabbit">🐰</span><span class="rabbit">🐰</span><span class="rabbit">🐰</span><span class="rabbit">🐰</span>
+                                    <span class="rabbit">🐰</span><span class="rabbit">🐰</span><span class="rabbit">🐰</span><span class="rabbit">🐰</span>
+                                    <span class="rabbit">🐰</span><span class="rabbit">🐰</span><span class="rabbit">🐰</span><span class="rabbit">🐰</span>
+                                </div>
+                                <span class="count-tag">24</span>
+                            </div>
+                            <div class="rabbits-row">
+                                <span class="rabbit-tag">灰兔</span>
+                                <div class="rabbits gray-rabbits">
+                                    <span class="rabbit">🐇</span><span class="rabbit">🐇</span><span class="rabbit">🐇</span><span class="rabbit">🐇</span>
+                                    <span class="rabbit">🐇</span><span class="rabbit">🐇</span><span class="rabbit">🐇</span><span class="rabbit">🐇</span>
+                                    <span class="rabbit">🐇</span><span class="rabbit">🐇</span><span class="rabbit">🐇</span><span class="rabbit">🐇</span>
+                                    <span class="rabbit">🐇</span><span class="rabbit">🐇</span><span class="rabbit">🐇</span><span class="rabbit">🐇</span>
+                                    <span class="rabbit">🐇</span>
+                                </div>
+                                <span class="count-tag">17</span>
+                            </div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：要求"多几只"，用<strong>减法</strong>：多的 − 少的！</div>
+                    </div>
+                </div>
+
+                <!-- 5.2 列式计算 -->
+                <div class="slide" data-slide="1">
+                    <div class="lesson-block">
+                        <h3 class="block-title">✏️ 列式解答</h3>
+                        <div class="solve-step">
+                            <div class="solve-line">
+                                <span class="solve-tag">已知</span>
+                                <span class="solve-text">白兔 24 只，灰兔 17 只</span>
+                            </div>
+                            <div class="solve-line">
+                                <span class="solve-tag">问题</span>
+                                <span class="solve-text">白兔比灰兔多几只？</span>
+                            </div>
+                            <div class="solve-line">
+                                <span class="solve-tag">思路</span>
+                                <span class="solve-text">求一个数比另一个数<strong>多几</strong>，用减法</span>
+                            </div>
+                            <div class="solve-line big-eq">
+                                <span class="solve-tag">算式</span>
+                                <span class="solve-text">24 − 17 = <span class="hl-yellow">7</span>（只）</span>
+                            </div>
+                            <div class="solve-line">
+                                <span class="solve-tag">答</span>
+                                <span class="solve-text">白兔比灰兔多 <strong class="hl-pink">7</strong> 只。</span>
+                            </div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：看清楚问的是"多"还是"少"，单位别忘了写！</div>
+                    </div>
+                </div>
+
+                <!-- 5.3 三种关系总结 -->
+                <div class="slide" data-slide="2">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🧠 三种关系，记住它！</h3>
+                        <div class="relation-cards">
+                            <div class="rel-card rel-card-1">
+                                <div class="rel-emoji">🍎🍎🍎</div>
+                                <div class="rel-text"><strong>求一共</strong>：用 <span class="hl-yellow">加法</span></div>
+                                <div class="rel-form">小明有 5 个苹果，妈妈又买了 3 个，一共多少个？<br>5 + 3 = 8</div>
+                            </div>
+                            <div class="rel-card rel-card-2">
+                                <div class="rel-emoji">✈️📦</div>
+                                <div class="rel-text"><strong>求部分</strong>：用 <span class="hl-pink">减法</span></div>
+                                <div class="rel-form">飞机上有 10 人，到站下来 4 人，还剩几人？<br>10 − 4 = 6</div>
+                            </div>
+                            <div class="rel-card rel-card-3">
+                                <div class="rel-emoji">🐰🐇</div>
+                                <div class="rel-text"><strong>比多比少</strong>：用 <span class="hl-blue">减法</span></div>
+                                <div class="rel-form">白兔 24 只，灰兔 17 只，白兔比灰兔多几只？<br>24 − 17 = 7</div>
+                            </div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：看到"一共"想加法，看到"还剩/多/少"想减法！</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-nav">
+                <button class="btn-slide btn-slide-prev" data-action="prev">←</button>
+                <div class="slide-counter"><span class="cur-slide">1</span> / <span class="total-slides">3</span></div>
+                <button class="btn-slide btn-slide-next" data-action="next">→</button>
+            </div>
+        </section>
+
+        <!-- ============= 第 6 节: 互动练习 + 单元小结 ============= -->
+        <section class="section" data-section="6">
+            <div class="section-header">
+                <span class="section-tag">第 6 节</span>
+                <h2 class="section-title">🎮 闯关练习 · 单元小结</h2>
+            </div>
+
+            <div class="slides-container">
+                <!-- 6.1 闯关练习 -->
+                <div class="slide active" data-slide="0">
+                    <div class="lesson-block">
+                        <h3 class="block-title">🎯 小熊闯关赛</h3>
+                        <p class="block-desc">答对一题得一颗 ⭐，看看你能得几颗？</p>
+                        <div class="quiz-stage" id="quizStage">
+                            <div class="quiz-card" id="quizCard">
+                                <div class="quiz-progress">
+                                    <span class="quiz-cur">1</span> / <span class="quiz-total">4</span>
+                                </div>
+                                <div class="quiz-question" id="quizQuestion">23 + 5 = ?</div>
+                                <div class="quiz-options" id="quizOptions">
+                                    <button class="quiz-opt" data-answer="26">26</button>
+                                    <button class="quiz-opt" data-answer="28">28</button>
+                                    <button class="quiz-opt" data-answer="27">27</button>
+                                    <button class="quiz-opt" data-answer="25">25</button>
+                                </div>
+                                <div class="quiz-feedback" id="quizFeedback"></div>
+                            </div>
+                            <div class="quiz-stars" id="quizStars">⭐ 0</div>
+                        </div>
+                        <div class="parent-tip">💡 家长读这句：让孩子自己算，不会的可以翻前面的内容看看！</div>
+                    </div>
+                </div>
+
+                <!-- 6.2 单元小结 -->
+                <div class="slide" data-slide="1">
+                    <div class="lesson-block summary-block">
+                        <h3 class="block-title">🎉 单元小结</h3>
+                        <div class="summary-grid">
+                            <div class="sum-item">
+                                <span class="sum-emoji">🧮</span>
+                                <span class="sum-text"><strong>整十数加减</strong>：末尾的 0 不变，只算 0 前面的数</span>
+                            </div>
+                            <div class="sum-item">
+                                <span class="sum-emoji">🍎</span>
+                                <span class="sum-text"><strong>两位数 ± 一位数</strong>：先算个位，十位照搬</span>
+                            </div>
+                            <div class="sum-item">
+                                <span class="sum-emoji">⚠️</span>
+                                <span class="sum-text"><strong>进位加法</strong>：个位满 10，向十位进 1</span>
+                            </div>
+                            <div class="sum-item">
+                                <span class="sum-emoji">🔙</span>
+                                <span class="sum-text"><strong>退位减法</strong>：个位不够减，从十位借 1 当 10</span>
+                            </div>
+                            <div class="sum-item">
+                                <span class="sum-emoji">📝</span>
+                                <span class="sum-text"><strong>竖式计算</strong>：相同数位对齐，从个位算起</span>
+                            </div>
+                            <div class="sum-item">
+                                <span class="sum-emoji">🤔</span>
+                                <span class="sum-text"><strong>解决问题</strong>：求一共用加法，求部分用减法</span>
+                            </div>
+                        </div>
+                        <div class="summary-footer">
+                            🎓 恭喜宝宝学完第二单元！下个单元我们一起认识 <strong>角的初步认识</strong>，敬请期待~
+                        </div>
+                        <div class="confetti-zone" id="confettiZone"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-nav">
+                <button class="btn-slide btn-slide-prev" data-action="prev">←</button>
+                <div class="slide-counter"><span class="cur-slide">1</span> / <span class="total-slides">2</span></div>
+                <button class="btn-slide btn-slide-next" data-action="next">→</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
