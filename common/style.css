@@ -108,17 +108,38 @@ h2 {
     fill: #666;
 }
 
-/* 导航按钮 */
+/* 导航按钮 - 页脚导航（旧版，保留兼容） */
 .nav-buttons {
     position: absolute;
     bottom: 30px;
     left: 0;
     right: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    padding: 0 50px;
     z-index: 1001;
+}
+
+.nav-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 幻灯片导航 - 新版本：按钮在页码两边，整体靠右 */
+.slide-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 20px;
+}
+
+.slide-nav .nav-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .nav-btn {
@@ -262,6 +283,14 @@ h2 {
     .nav-buttons {
         padding: 0 25px;
         bottom: 20px;
+    }
+    
+    .nav-group {
+        gap: 10px;
+    }
+    
+    .slide-nav {
+        padding-right: 25px;
     }
     
     .nav-btn {
