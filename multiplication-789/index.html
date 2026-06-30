@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- v20260630 - 第 6 单元 表内乘法（二） -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二年级数学 - 表内乘法（二）</title>
+    <link rel="stylesheet" href="../common/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Section 0: 封面 -->
+        <section class="section active" data-section="0">
+            <div class="slide active" data-slide="0">
+                <h1>表内乘法（二）</h1>
+                <p class="subtitle">二年级数学 第六单元</p>
+                <div class="cover-image">
+                    <svg viewBox="0 0 250 200" class="cover-multiplication-svg">
+                        <!-- 7、8、9 乘法口诀主题 -->
+                        <rect x="20" y="40" width="210" height="120" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3" rx="10"/>
+                        <text x="125" y="80" text-anchor="middle" font-size="32" fill="#2E7D32" font-weight="bold">7 的乘法口诀</text>
+                        <text x="125" y="115" text-anchor="middle" font-size="32" fill="#1976D2" font-weight="bold">8 的乘法口诀</text>
+                        <text x="125" y="150" text-anchor="middle" font-size="32" fill="#F57C00" font-weight="bold">9 的乘法口诀</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: 7 的乘法口诀 -->
+        <section class="section" data-section="1">
+            <div class="slide active" data-slide="0">
+                <h2>7 的乘法口诀</h2>
+                <p class="instruction">看图学习 7 的乘法口诀</p>
+                <div class="koujue-intro">
+                    <div class="intro-visual">
+                        <svg viewBox="0 0 200 150">
+                            <!-- 七巧板/七星瓢虫主题 -->
+                            <g class="ladybug" transform="translate(30, 40)">
+                                <ellipse cx="40" cy="40" rx="35" ry="30" fill="#F44336" stroke="#B71C1C" stroke-width="2"/>
+                                <line x1="40" y1="10" x2="40" y2="70" stroke="#B71C1C" stroke-width="2"/>
+                                <circle cx="25" cy="30" r="5" fill="#212121"/>
+                                <circle cx="55" cy="30" r="5" fill="#212121"/>
+                                <circle cx="25" cy="50" r="5" fill="#212121"/>
+                                <circle cx="55" cy="50" r="5" fill="#212121"/>
+                                <circle cx="40" cy="20" r="5" fill="#212121"/>
+                                <circle cx="40" cy="60" r="5" fill="#212121"/>
+                                <circle cx="40" cy="40" r="5" fill="#212121"/>
+                            </g>
+                            <text x="140" y="60" font-size="16" fill="#333">1 只瓢虫 7 个点</text>
+                            <text x="140" y="90" font-size="16" fill="#333">2 只瓢虫 14 个点</text>
+                            <text x="140" y="120" font-size="16" fill="#333">3 只瓢虫 21 个点</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="koujue-card koujue-7">
+                    <div class="koujue-row">
+                        <span class="koujue-text">一七得七</span>
+                        <span class="koujue-equation">1 × 7 = 7</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">二七十四</span>
+                        <span class="koujue-equation">2 × 7 = 14</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">三七二十一</span>
+                        <span class="koujue-equation">3 × 7 = 21</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">四七二十八</span>
+                        <span class="koujue-equation">4 × 7 = 28</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">五七三十五</span>
+                        <span class="koujue-equation">5 × 7 = 35</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">六七四十二</span>
+                        <span class="koujue-equation">6 × 7 = 42</span>
+                    </div>
+                    <div class="koujue-row highlight">
+                        <span class="koujue-text">七七四十九</span>
+                        <span class="koujue-equation">7 × 7 = 49</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>7 的乘法口诀练习</h2>
+                <div class="practice-grid">
+                    <div class="practice-card">
+                        <p class="practice-question">7 × 3 = ?</p>
+                        <input type="number" class="practice-input" data-answer="21" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">7 × 5 = ?</p>
+                        <input type="number" class="practice-input" data-answer="35" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">7 × 7 = ?</p>
+                        <input type="number" class="practice-input" data-answer="49" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">4 × 7 = ?</p>
+                        <input type="number" class="practice-input" data-answer="28" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">6 × 7 = ?</p>
+                        <input type="number" class="practice-input" data-answer="42" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">2 × 7 = ?</p>
+                        <input type="number" class="practice-input" data-answer="14" min="0" max="99">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 8 的乘法口诀 -->
+        <section class="section" data-section="2">
+            <div class="slide active" data-slide="0">
+                <h2>8 的乘法口诀</h2>
+                <p class="instruction">看图学习 8 的乘法口诀</p>
+                <div class="koujue-intro">
+                    <div class="intro-visual">
+                        <svg viewBox="0 0 250 150">
+                            <!-- 八爪鱼主题 -->
+                            <g class="octopus" transform="translate(30, 30)">
+                                <ellipse cx="40" cy="40" rx="30" ry="25" fill="#FF8A65" stroke="#E64A19" stroke-width="2"/>
+                                <circle cx="30" cy="35" r="5" fill="#212121"/>
+                                <circle cx="50" cy="35" r="5" fill="#212121"/>
+                                <!-- 8 条腿 -->
+                                <path d="M 25 60 Q 15 80 10 70" stroke="#FF8A65" stroke-width="4" fill="none"/>
+                                <path d="M 32 60 Q 30 80 30 75" stroke="#FF8A65" stroke-width="4" fill="none"/>
+                                <path d="M 40 60 Q 40 80 40 75" stroke="#FF8A65" stroke-width="4" fill="none"/>
+                                <path d="M 48 60 Q 50 80 50 75" stroke="#FF8A65" stroke-width="4" fill="none"/>
+                                <path d="M 55 60 Q 65 80 70 70" stroke="#FF8A65" stroke-width="4" fill="none"/>
+                            </g>
+                            <text x="130" y="50" font-size="16" fill="#333">1 只章鱼 8 条腿</text>
+                            <text x="130" y="80" font-size="16" fill="#333">2 只章鱼 16 条腿</text>
+                            <text x="130" y="110" font-size="16" fill="#333">3 只章鱼 24 条腿</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="koujue-card koujue-8">
+                    <div class="koujue-row">
+                        <span class="koujue-text">一八得八</span>
+                        <span class="koujue-equation">1 × 8 = 8</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">二八十六</span>
+                        <span class="koujue-equation">2 × 8 = 16</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">三八二十四</span>
+                        <span class="koujue-equation">3 × 8 = 24</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">四八三十二</span>
+                        <span class="koujue-equation">4 × 8 = 32</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">五八四十</span>
+                        <span class="koujue-equation">5 × 8 = 40</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">六八四十八</span>
+                        <span class="koujue-equation">6 × 8 = 48</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">七八五十六</span>
+                        <span class="koujue-equation">7 × 8 = 56</span>
+                    </div>
+                    <div class="koujue-row highlight">
+                        <span class="koujue-text">八八六十四</span>
+                        <span class="koujue-equation">8 × 8 = 64</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>8 的乘法口诀练习</h2>
+                <div class="practice-grid">
+                    <div class="practice-card">
+                        <p class="practice-question">8 × 4 = ?</p>
+                        <input type="number" class="practice-input" data-answer="32" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">8 × 6 = ?</p>
+                        <input type="number" class="practice-input" data-answer="48" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">8 × 8 = ?</p>
+                        <input type="number" class="practice-input" data-answer="64" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">5 × 8 = ?</p>
+                        <input type="number" class="practice-input" data-answer="40" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">7 × 8 = ?</p>
+                        <input type="number" class="practice-input" data-answer="56" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">3 × 8 = ?</p>
+                        <input type="number" class="practice-input" data-answer="24" min="0" max="99">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 9 的乘法口诀 -->
+        <section class="section" data-section="3">
+            <div class="slide active" data-slide="0">
+                <h2>9 的乘法口诀</h2>
+                <p class="instruction">看图学习 9 的乘法口诀</p>
+                <div class="koujue-intro">
+                    <div class="intro-visual">
+                        <svg viewBox="0 0 250 150">
+                            <!-- 九宫格/气球主题 -->
+                            <g class="balloons">
+                                <circle cx="30" cy="40" r="12" fill="#9FA8DA" stroke="#5C6BC0" stroke-width="2"/>
+                                <circle cx="55" cy="40" r="12" fill="#9FA8DA" stroke="#5C6BC0" stroke-width="2"/>
+                                <circle cx="80" cy="40" r="12" fill="#9FA8DA" stroke="#5C6BC0" stroke-width="2"/>
+                                <circle cx="30" cy="70" r="12" fill="#9FA8DA" stroke="#5C6BC0" stroke-width="2"/>
+                                <circle cx="55" cy="70" r="12" fill="#9FA8DA" stroke="#5C6BC0" stroke-width="2"/>
+                                <circle cx="80" cy="70" r="12" fill="#9FA8DA" stroke="#5C6BC0" stroke-width="2"/>
+                                <circle cx="30" cy="100" r="12" fill="#9FA8DA" stroke="#5C6BC0" stroke-width="2"/>
+                                <circle cx="55" cy="100" r="12" fill="#9FA8DA" stroke="#5C6BC0" stroke-width="2"/>
+                                <circle cx="80" cy="100" r="12" fill="#9FA8DA" stroke="#5C6BC0" stroke-width="2"/>
+                            </g>
+                            <text x="130" y="50" font-size="16" fill="#333">1 行 9 个气球</text>
+                            <text x="130" y="80" font-size="16" fill="#333">2 行 18 个气球</text>
+                            <text x="130" y="110" font-size="16" fill="#333">3 行 27 个气球</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="koujue-card koujue-9">
+                    <div class="koujue-row">
+                        <span class="koujue-text">一九得九</span>
+                        <span class="koujue-equation">1 × 9 = 9</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">二九十八</span>
+                        <span class="koujue-equation">2 × 9 = 18</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">三九二十七</span>
+                        <span class="koujue-equation">3 × 9 = 27</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">四九三十六</span>
+                        <span class="koujue-equation">4 × 9 = 36</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">五九四十五</span>
+                        <span class="koujue-equation">5 × 9 = 45</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">六九五十四</span>
+                        <span class="koujue-equation">6 × 9 = 54</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">七九六十三</span>
+                        <span class="koujue-equation">7 × 9 = 63</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">八九七十二</span>
+                        <span class="koujue-equation">8 × 9 = 72</span>
+                    </div>
+                    <div class="koujue-row highlight">
+                        <span class="koujue-text">九九八十一</span>
+                        <span class="koujue-equation">9 × 9 = 81</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>9 的乘法口诀练习</h2>
+                <div class="practice-grid">
+                    <div class="practice-card">
+                        <p class="practice-question">9 × 5 = ?</p>
+                        <input type="number" class="practice-input" data-answer="45" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">9 × 7 = ?</p>
+                        <input type="number" class="practice-input" data-answer="63" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">9 × 9 = ?</p>
+                        <input type="number" class="practice-input" data-answer="81" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">6 × 9 = ?</p>
+                        <input type="number" class="practice-input" data-answer="54" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">8 × 9 = ?</p>
+                        <input type="number" class="practice-input" data-answer="72" min="0" max="99">
+                    </div>
+                    <div class="practice-card">
+                        <p class="practice-question">4 × 9 = ?</p>
+                        <input type="number" class="practice-input" data-answer="36" min="0" max="99">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: 综合练习 -->
+        <section class="section" data-section="4">
+            <div class="slide active" data-slide="0">
+                <h2>对口令：乘法口诀</h2>
+                <div class="koujue-quiz">
+                    <div class="quiz-question">
+                        <p class="question-text">七七？</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-answer="四十九">四十九</button>
+                            <button class="quiz-option" data-wrong="true">四十八</button>
+                            <button class="quiz-option" data-wrong="true">四十二</button>
+                        </div>
+                        <p class="quiz-feedback"></p>
+                    </div>
+                    <div class="quiz-question">
+                        <p class="question-text">八九？</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-wrong="true">七十</button>
+                            <button class="quiz-option" data-answer="七十二">七十二</button>
+                            <button class="quiz-option" data-wrong="true">七十四</button>
+                        </div>
+                        <p class="quiz-feedback"></p>
+                    </div>
+                    <div class="quiz-question">
+                        <p class="question-text">六九？</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-wrong="true">五十六</button>
+                            <button class="quiz-option" data-wrong="true">六十三</button>
+                            <button class="quiz-option" data-answer="五十四">五十四</button>
+                        </div>
+                        <p class="quiz-feedback"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>计算小能手</h2>
+                <div class="calculation-quiz">
+                    <div class="calc-problem">
+                        <span class="problem">7 × 8 = </span>
+                        <input type="number" class="calc-input" data-answer="56" min="0" max="99">
+                    </div>
+                    <div class="calc-problem">
+                        <span class="problem">9 × 6 = </span>
+                        <input type="number" class="calc-input" data-answer="54" min="0" max="99">
+                    </div>
+                    <div class="calc-problem">
+                        <span class="problem">8 × 9 = </span>
+                        <input type="number" class="calc-input" data-answer="72" min="0" max="99">
+                    </div>
+                    <div class="calc-problem">
+                        <span class="problem">7 × 9 = </span>
+                        <input type="number" class="calc-input" data-answer="63" min="0" max="99">
+                    </div>
+                    <div class="calc-problem">
+                        <span class="problem">8 × 7 = </span>
+                        <input type="number" class="calc-input" data-answer="56" min="0" max="99">
+                    </div>
+                    <div class="calc-problem">
+                        <span class="problem">9 × 9 = </span>
+                        <input type="number" class="calc-input" data-answer="81" min="0" max="99">
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="btn-check-calc">检查答案</button>
+                <p class="feedback" id="calc-feedback"></p>
+            </div>
+            <div class="slide" data-slide="2">
+                <h2>解决问题</h2>
+                <div class="word-problems">
+                    <div class="problem-card">
+                        <p class="problem-text">1. 每盒装 8 支铅笔，7 盒共多少支？</p>
+                        <div class="problem-solution">
+                            <input type="number" class="word-input" placeholder="?" min="0" max="999"> 支
+                            <p class="solution-hint">算式：8 × 7 = □</p>
+                        </div>
+                    </div>
+                    <div class="problem-card">
+                        <p class="problem-text">2. 一本书 9 元，买 6 本需要多少钱？</p>
+                        <div class="problem-solution">
+                            <input type="number" class="word-input" placeholder="?" min="0" max="999"> 元
+                            <p class="solution-hint">算式：9 × 6 = □</p>
+                        </div>
+                    </div>
+                    <div class="problem-card">
+                        <p class="problem-text">3. 每排坐 9 个同学，8 排共多少人？</p>
+                        <div class="problem-solution">
+                            <input type="number" class="word-input" placeholder="?" min="0" max="999"> 人
+                            <p class="solution-hint">算式：9 × 8 = □</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="btn-check-words">检查答案</button>
+                <p class="feedback" id="words-feedback"></p>
+            </div>
+        </section>
+
+        <!-- Section 5: 总结与拓展 -->
+        <section class="section" data-section="5">
+            <div class="slide active" data-slide="0">
+                <h2>9 的乘法口诀的规律</h2>
+                <div class="pattern-discovery">
+                    <div class="pattern-table">
+                        <table>
+                            <tr><th>算式</th><th>积</th><th>十位 + 个位</th></tr>
+                            <tr><td>1 × 9</td><td>09</td><td>0 + 9 = 9</td></tr>
+                            <tr><td>2 × 9</td><td>18</td><td>1 + 8 = 9</td></tr>
+                            <tr><td>3 × 9</td><td>27</td><td>2 + 7 = 9</td></tr>
+                            <tr><td>4 × 9</td><td>36</td><td>3 + 6 = 9</td></tr>
+                            <tr><td>5 × 9</td><td>45</td><td>4 + 5 = 9</td></tr>
+                            <tr><td>6 × 9</td><td>54</td><td>5 + 4 = 9</td></tr>
+                            <tr><td>7 × 9</td><td>63</td><td>6 + 3 = 9</td></tr>
+                            <tr><td>8 × 9</td><td>72</td><td>7 + 2 = 9</td></tr>
+                            <tr><td>9 × 9</td><td>81</td><td>8 + 1 = 9</td></tr>
+                        </table>
+                    </div>
+                    <div class="pattern-tip">
+                        <p><strong>发现规律：</strong></p>
+                        <ul>
+                            <li>9 的乘法口诀，积的十位和个位相加都等于 9</li>
+                            <li>十位数字比乘数少 1</li>
+                            <li>可以用手指帮助记忆 9 的乘法口诀</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>课堂总结</h2>
+                <div class="summary-content">
+                    <div class="summary-card">
+                        <h3>📌 7 的乘法口诀</h3>
+                        <ul>
+                            <li>共 7 句</li>
+                            <li>七七四十九</li>
+                        </ul>
+                    </div>
+                    <div class="summary-card">
+                        <h3>📌 8 的乘法口诀</h3>
+                        <ul>
+                            <li>共 8 句</li>
+                            <li>八八六十四</li>
+                        </ul>
+                    </div>
+                    <div class="summary-card">
+                        <h3>📌 9 的乘法口诀</h3>
+                        <ul>
+                            <li>共 9 句</li>
+                            <li>九九八十一</li>
+                            <li>积的十位 + 个位 = 9</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="2">
+                <h2>课后练习</h2>
+                <div class="homework-content">
+                    <p class="homework-item">📝 1. 背诵 7、8、9 的乘法口诀</p>
+                    <p class="homework-item">📝 2. 完成练习册第 6 单元习题</p>
+                    <p class="homework-item">📝 3. 用 9 的乘法口诀规律快速计算：9 × 4、9 × 7、9 × 8</p>
+                    <p class="homework-item">📝 4. 家长对口令练习：随机说乘法算式，快速回答口诀</p>
+                </div>
+                <div class="end-message">
+                    <p>🎉 恭喜你完成了第六单元的学习！</p>
+                    <p>现在你已经学会了 1-9 的全部乘法口诀！</p>
+                    <p>继续加油，成为乘法小达人！🏆</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 导航按钮 -->
+        <div class="nav-buttons">
+            <button class="nav-btn prev-btn" id="prevBtn" disabled>上一页</button>
+            <span class="slide-indicator" id="slideIndicator">第 1 页</span>
+            <button class="nav-btn next-btn" id="nextBtn">下一页</button>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

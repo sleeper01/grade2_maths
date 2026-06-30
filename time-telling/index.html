@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- v20260630 - 第 7 单元 认识时间 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二年级数学 - 认识时间</title>
+    <link rel="stylesheet" href="../common/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Section 0: 封面 -->
+        <section class="section active" data-section="0">
+            <div class="slide active" data-slide="0">
+                <h1>认识时间</h1>
+                <p class="subtitle">二年级数学 第七单元</p>
+                <div class="cover-image">
+                    <svg viewBox="0 0 250 250" class="cover-clock-svg">
+                        <circle cx="125" cy="125" r="100" fill="#E3F2FD" stroke="#1976D2" stroke-width="4"/>
+                        <!-- 刻度 -->
+                        <line x1="125" y1="35" x2="125" y2="45" stroke="#1976D2" stroke-width="3"/>
+                        <line x1="125" y1="205" x2="125" y2="215" stroke="#1976D2" stroke-width="3"/>
+                        <line x1="35" y1="125" x2="45" y2="125" stroke="#1976D2" stroke-width="3"/>
+                        <line x1="205" y1="125" x2="215" y2="125" stroke="#1976D2" stroke-width="3"/>
+                        <!-- 数字 -->
+                        <text x="125" y="65" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">12</text>
+                        <text x="185" y="130" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">3</text>
+                        <text x="125" y="200" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">6</text>
+                        <text x="65" y="130" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">9</text>
+                        <!-- 时针 -->
+                        <line x1="125" y1="125" x2="125" y2="80" stroke="#F44336" stroke-width="5" stroke-linecap="round" class="hour-hand"/>
+                        <!-- 分针 -->
+                        <line x1="125" y1="125" x2="125" y2="55" stroke="#2196F3" stroke-width="3" stroke-linecap="round" class="minute-hand"/>
+                        <!-- 中心点 -->
+                        <circle cx="125" cy="125" r="8" fill="#333"/>
+                        <circle cx="125" cy="125" r="4" fill="#FFF"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: 认识钟面 -->
+        <section class="section" data-section="1">
+            <div class="slide active" data-slide="0">
+                <h2>认识钟面</h2>
+                <p class="instruction">钟面上有什么？</p>
+                <div class="clock-parts">
+                    <div class="clock-large">
+                        <svg viewBox="0 0 200 200" class="learning-clock">
+                            <!-- 钟面背景 -->
+                            <circle cx="100" cy="100" r="90" fill="#FFF" stroke="#333" stroke-width="3"/>
+                            
+                            <!-- 12 个刻度线（放射状，延长线过圆心） -->
+                            <!-- 12 点 - 长刻度 -->
+                            <line x1="100" y1="18" x2="100" y2="10" stroke="#333" stroke-width="3"/>
+                            <!-- 1 点 - 短刻度 (30°) -->
+                            <line x1="141" y1="29" x2="145" y2="22" stroke="#333" stroke-width="2"/>
+                            <!-- 2 点 - 短刻度 (60°) -->
+                            <line x1="171" y1="59" x2="178" y2="55" stroke="#333" stroke-width="2"/>
+                            <!-- 3 点 - 长刻度 (90°) -->
+                            <line x1="182" y1="100" x2="190" y2="100" stroke="#333" stroke-width="3"/>
+                            <!-- 4 点 - 短刻度 (120°) -->
+                            <line x1="171" y1="141" x2="178" y2="145" stroke="#333" stroke-width="2"/>
+                            <!-- 5 点 - 短刻度 (150°) -->
+                            <line x1="141" y1="171" x2="145" y2="178" stroke="#333" stroke-width="2"/>
+                            <!-- 6 点 - 长刻度 (180°) -->
+                            <line x1="100" y1="182" x2="100" y2="190" stroke="#333" stroke-width="3"/>
+                            <!-- 7 点 - 短刻度 (210°) -->
+                            <line x1="59" y1="171" x2="55" y2="178" stroke="#333" stroke-width="2"/>
+                            <!-- 8 点 - 短刻度 (240°) -->
+                            <line x1="29" y1="141" x2="22" y2="145" stroke="#333" stroke-width="2"/>
+                            <!-- 9 点 - 长刻度 (270°) -->
+                            <line x1="18" y1="100" x2="10" y2="100" stroke="#333" stroke-width="3"/>
+                            <!-- 10 点 - 短刻度 (300°) -->
+                            <line x1="29" y1="59" x2="22" y2="55" stroke="#333" stroke-width="2"/>
+                            <!-- 11 点 - 短刻度 (330°) -->
+                            <line x1="59" y1="29" x2="55" y2="22" stroke="#333" stroke-width="2"/>
+                            
+                            <!-- 4 个关键数字 -->
+                            <text x="100" y="45" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">12</text>
+                            <text x="165" y="108" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">3</text>
+                            <text x="100" y="175" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">6</text>
+                            <text x="35" y="108" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">9</text>
+                            
+                            <!-- 时针 -->
+                            <line x1="100" y1="100" x2="100" y2="55" stroke="#F44336" stroke-width="5" stroke-linecap="round" class="hour-hand"/>
+                            <!-- 分针 -->
+                            <line x1="100" y1="100" x2="100" y2="25" stroke="#2196F3" stroke-width="3" stroke-linecap="round" class="minute-hand"/>
+                            <!-- 中心点 -->
+                            <circle cx="100" cy="100" r="6" fill="#333"/>
+                        </svg>
+                    </div>
+                    <div class="clock-info">
+                        <div class="info-item">
+                            <div class="hand-sample hour"></div>
+                            <span><strong>时针</strong>：又短又粗，走得慢</span>
+                        </div>
+                        <div class="info-item">
+                            <div class="hand-sample minute"></div>
+                            <span><strong>分针</strong>：又长又细，走得快</span>
+                        </div>
+                        <div class="info-item">
+                            <span><strong>12 个大格</strong>：每个大格代表 1 小时</span>
+                        </div>
+                        <div class="info-item">
+                            <span><strong>60 个小格</strong>：每个小格代表 1 分钟</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>认识时针和分针</h2>
+                <p class="instruction">时针走 1 大格是 1 小时，分针走 1 小格是 1 分钟</p>
+                <div class="time-relation">
+                    <div class="relation-card">
+                        <svg viewBox="0 0 150 150">
+                            <circle cx="75" cy="75" r="65" fill="#FFF" stroke="#333" stroke-width="2"/>
+                            <text x="75" y="40" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">12</text>
+                            <text x="75" y="140" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">6</text>
+                            <line x1="75" y1="75" x2="75" y2="30" stroke="#F44336" stroke-width="4" stroke-linecap="round"/>
+                            <circle cx="75" cy="75" r="5" fill="#333"/>
+                        </svg>
+                        <p>时针指向 12</p>
+                    </div>
+                    <div class="relation-arrow">→</div>
+                    <div class="relation-card">
+                        <svg viewBox="0 0 150 150">
+                            <circle cx="75" cy="75" r="65" fill="#FFF" stroke="#333" stroke-width="2"/>
+                            <text x="75" y="40" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">12</text>
+                            <text x="75" y="140" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">6</text>
+                            <line x1="75" y1="75" x2="75" y2="30" stroke="#F44336" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="75" y1="75" x2="75" y2="20" stroke="#2196F3" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="75" cy="75" r="5" fill="#333"/>
+                        </svg>
+                        <p>分针指向 12</p>
+                    </div>
+                    <div class="relation-result">
+                        <p class="time-display">12:00</p>
+                        <p>12 时整</p>
+                    </div>
+                </div>
+                <div class="key-point">
+                    <strong>记住：</strong>时针走 1 大格 = 1 小时，分针走 1 圈 = 60 分钟 = 1 小时
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 认识整时 -->
+        <section class="section" data-section="2">
+            <div class="slide active" data-slide="0">
+                <h2>认识整时</h2>
+                <p class="instruction">分针指向 12，时针指向几就是几时</p>
+                <div class="whole-hour-examples">
+                    <div class="hour-card">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="50" fill="#FFF3CD" stroke="#FFC107" stroke-width="2"/>
+                            <text x="60" y="30" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">12</text>
+                            <text x="60" y="105" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">6</text>
+                            <line x1="60" y1="60" x2="60" y2="25" stroke="#F44336" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="60" y1="60" x2="60" y2="15" stroke="#2196F3" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="60" cy="60" r="4" fill="#333"/>
+                        </svg>
+                        <p class="time-text">8 时</p>
+                        <p class="digital-time">8:00</p>
+                    </div>
+                    <div class="hour-card">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="50" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+                            <text x="60" y="30" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">12</text>
+                            <text x="60" y="105" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">6</text>
+                            <line x1="60" y1="60" x2="95" y2="60" stroke="#F44336" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="60" y1="60" x2="60" y2="15" stroke="#2196F3" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="60" cy="60" r="4" fill="#333"/>
+                        </svg>
+                        <p class="time-text">3 时</p>
+                        <p class="digital-time">3:00</p>
+                    </div>
+                    <div class="hour-card">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="50" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+                            <text x="60" y="30" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">12</text>
+                            <text x="60" y="105" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">6</text>
+                            <line x1="60" y1="60" x2="60" y2="95" stroke="#F44336" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="60" y1="60" x2="60" y2="15" stroke="#2196F3" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="60" cy="60" r="4" fill="#333"/>
+                        </svg>
+                        <p class="time-text">6 时</p>
+                        <p class="digital-time">6:00</p>
+                    </div>
+                </div>
+                <div class="key-point">
+                    <strong>整时的特点：</strong>分针指向 12，时针指向几就是几时
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>拨一拨：认整时</h2>
+                <p class="instruction">点击下面的时间，在钟面上拨出对应时间</p>
+                <div class="interactive-clock-section">
+                    <div class="interactive-clock">
+                        <svg viewBox="0 0 200 200" id="whole-hour-clock">
+                            <!-- 钟面背景 -->
+                            <circle cx="100" cy="100" r="90" fill="#FFF" stroke="#333" stroke-width="3"/>
+                            
+                            <!-- 12 个刻度线（放射状，延长线过圆心） -->
+                            <!-- 12 点 - 长刻度 -->
+                            <line x1="100" y1="18" x2="100" y2="10" stroke="#333" stroke-width="3"/>
+                            <!-- 1 点 - 短刻度 (30°) -->
+                            <line x1="141" y1="29" x2="145" y2="22" stroke="#333" stroke-width="2"/>
+                            <!-- 2 点 - 短刻度 (60°) -->
+                            <line x1="171" y1="59" x2="178" y2="55" stroke="#333" stroke-width="2"/>
+                            <!-- 3 点 - 长刻度 (90°) -->
+                            <line x1="182" y1="100" x2="190" y2="100" stroke="#333" stroke-width="3"/>
+                            <!-- 4 点 - 短刻度 (120°) -->
+                            <line x1="171" y1="141" x2="178" y2="145" stroke="#333" stroke-width="2"/>
+                            <!-- 5 点 - 短刻度 (150°) -->
+                            <line x1="141" y1="171" x2="145" y2="178" stroke="#333" stroke-width="2"/>
+                            <!-- 6 点 - 长刻度 (180°) -->
+                            <line x1="100" y1="182" x2="100" y2="190" stroke="#333" stroke-width="3"/>
+                            <!-- 7 点 - 短刻度 (210°) -->
+                            <line x1="59" y1="171" x2="55" y2="178" stroke="#333" stroke-width="2"/>
+                            <!-- 8 点 - 短刻度 (240°) -->
+                            <line x1="29" y1="141" x2="22" y2="145" stroke="#333" stroke-width="2"/>
+                            <!-- 9 点 - 长刻度 (270°) -->
+                            <line x1="18" y1="100" x2="10" y2="100" stroke="#333" stroke-width="3"/>
+                            <!-- 10 点 - 短刻度 (300°) -->
+                            <line x1="29" y1="59" x2="22" y2="55" stroke="#333" stroke-width="2"/>
+                            <!-- 11 点 - 短刻度 (330°) -->
+                            <line x1="59" y1="29" x2="55" y2="22" stroke="#333" stroke-width="2"/>
+                            
+                            <!-- 4 个关键数字 -->
+                            <text x="100" y="45" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">12</text>
+                            <text x="162" y="107" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">3</text>
+                            <text x="100" y="172" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">6</text>
+                            <text x="38" y="107" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">9</text>
+                            
+                            <!-- 时针 -->
+                            <line x1="100" y1="100" x2="100" y2="55" stroke="#F44336" stroke-width="5" stroke-linecap="round" id="hour-hand"/>
+                            <!-- 分针 -->
+                            <line x1="100" y1="100" x2="100" y2="25" stroke="#2196F3" stroke-width="3" stroke-linecap="round" id="minute-hand"/>
+                            <!-- 中心点 -->
+                            <circle cx="100" cy="100" r="5" fill="#333"/>
+                        </svg>
+                        <p class="current-time" id="current-time">8:00</p>
+                    </div>
+                    <div class="time-buttons">
+                        <button class="time-btn" data-hour="8">8:00</button>
+                        <button class="time-btn" data-hour="3">3:00</button>
+                        <button class="time-btn" data-hour="6">6:00</button>
+                        <button class="time-btn" data-hour="9">9:00</button>
+                        <button class="time-btn" data-hour="12">12:00</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 认识几时几分 -->
+        <section class="section" data-section="3">
+            <div class="slide active" data-slide="0">
+                <h2>认识几时几分</h2>
+                <p class="instruction">时针走过几就是几时多，分针指向几就是几分</p>
+                <div class="minute-learning">
+                    <div class="minute-clock">
+                        <svg viewBox="0 0 180 180">
+                            <circle cx="90" cy="90" r="80" fill="#FFF" stroke="#333" stroke-width="2"/>
+                            <!-- 小刻度 -->
+                            <g class="minute-marks">
+                                <line x1="90" y1="15" x2="90" y2="22" stroke="#333" stroke-width="2"/>
+                                <line x1="90" y1="158" x2="90" y2="165" stroke="#333" stroke-width="2"/>
+                                <line x1="15" y1="90" x2="22" y2="90" stroke="#333" stroke-width="2"/>
+                                <line x1="158" y1="90" x2="165" y2="90" stroke="#333" stroke-width="2"/>
+                            </g>
+                            <!-- 时针 -->
+                            <line x1="90" y1="90" x2="90" y2="50" stroke="#F44336" stroke-width="5" stroke-linecap="round"/>
+                            <!-- 分针 -->
+                            <line x1="90" y1="90" x2="90" y2="30" stroke="#2196F3" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="90" cy="90" r="5" fill="#333"/>
+                        </svg>
+                    </div>
+                    <div class="minute-explanation">
+                        <p><strong>读数方法：</strong></p>
+                        <ol>
+                            <li>先看时针：时针走过 8，就是 8 时多</li>
+                            <li>再看分针：分针指向 1，就是 5 分</li>
+                            <li>合起来读作：8 时 5 分</li>
+                            <li>写作：8:05</li>
+                        </ol>
+                        <p class="note"><strong>注意：</strong>分钟数不满 10，前面要写 0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>认一认：几时几分</h2>
+                <div class="time-examples">
+                    <div class="time-example-card">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="50" fill="#FFF3CD" stroke="#FFC107" stroke-width="2"/>
+                            <text x="60" y="30" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">12</text>
+                            <text x="60" y="105" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">6</text>
+                            <line x1="60" y1="60" x2="85" y2="75" stroke="#F44336" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="60" y1="60" x2="60" y2="20" stroke="#2196F3" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="60" cy="60" r="4" fill="#333"/>
+                        </svg>
+                        <p class="answer-time">4:00</p>
+                        <button class="show-answer">显示答案</button>
+                    </div>
+                    <div class="time-example-card">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="50" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+                            <text x="60" y="30" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">12</text>
+                            <text x="60" y="105" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">6</text>
+                            <line x1="60" y1="60" x2="45" y2="85" stroke="#F44336" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="60" y1="60" x2="90" y2="45" stroke="#2196F3" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="60" cy="60" r="4" fill="#333"/>
+                        </svg>
+                        <p class="answer-time">7:10</p>
+                        <button class="show-answer">显示答案</button>
+                    </div>
+                    <div class="time-example-card">
+                        <svg viewBox="0 0 120 120">
+                            <circle cx="60" cy="60" r="50" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+                            <text x="60" y="30" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">12</text>
+                            <text x="60" y="105" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">6</text>
+                            <line x1="60" y1="60" x2="35" y2="50" stroke="#F44336" stroke-width="4" stroke-linecap="round"/>
+                            <line x1="60" y1="60" x2="75" y2="35" stroke="#2196F3" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="60" cy="60" r="4" fill="#333"/>
+                        </svg>
+                        <p class="answer-time">9:15</p>
+                        <button class="show-answer">显示答案</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: 时间的表示方法 -->
+        <section class="section" data-section="4">
+            <div class="slide active" data-slide="0">
+                <h2>时间的两种表示方法</h2>
+                <p class="instruction">同一种时间可以用不同方式表示</p>
+                <div class="time-format-compare">
+                    <div class="format-card">
+                        <h3>中文表示法</h3>
+                        <ul>
+                            <li>8 时 5 分</li>
+                            <li>3 时 30 分</li>
+                            <li>6 时 45 分</li>
+                        </ul>
+                    </div>
+                    <div class="format-arrow">⇄</div>
+                    <div class="format-card">
+                        <h3>电子表表示法</h3>
+                        <ul>
+                            <li>8:05</li>
+                            <li>3:30</li>
+                            <li>6:45</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-point">
+                    <strong>注意：</strong>电子表表示法中，分钟数不满 10 要在前面写 0
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>连一连：两种表示法</h2>
+                <div class="match-time-formats">
+                    <div class="match-column">
+                        <div class="match-item chinese" data-match="8:30">8 时 30 分</div>
+                        <div class="match-item chinese" data-match="4:15">4 时 15 分</div>
+                        <div class="match-item chinese" data-match="9:05">9 时 5 分</div>
+                        <div class="match-item chinese" data-match="12:00">12 时</div>
+                    </div>
+                    <div class="match-column">
+                        <div class="match-item digital" data-match="8:30">8:30</div>
+                        <div class="match-item digital" data-match="4:15">4:15</div>
+                        <div class="match-item digital" data-match="9:05">9:05</div>
+                        <div class="match-item digital" data-match="12:00">12:00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: 练习与总结 -->
+        <section class="section" data-section="5">
+            <div class="slide active" data-slide="0">
+                <h2>认时间练习</h2>
+                <div class="time-quiz">
+                    <div class="quiz-clock-card">
+                        <svg viewBox="0 0 150 150" class="quiz-clock">
+                            <circle cx="75" cy="75" r="65" fill="#FFF" stroke="#333" stroke-width="2"/>
+                            <text x="75" y="35" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">12</text>
+                            <text x="75" y="140" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">6</text>
+                            <text x="135" y="80" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">3</text>
+                            <text x="15" y="80" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">9</text>
+                            <line x1="75" y1="75" x2="75" y2="40" stroke="#F44336" stroke-width="4" stroke-linecap="round" class="quiz-hour"/>
+                            <line x1="75" y1="75" x2="110" y2="75" stroke="#2196F3" stroke-width="3" stroke-linecap="round" class="quiz-minute"/>
+                            <circle cx="75" cy="75" r="5" fill="#333"/>
+                        </svg>
+                        <div class="quiz-input">
+                            <input type="number" class="time-hour" placeholder="时" min="1" max="12"> : 
+                            <input type="number" class="time-minute" placeholder="分" min="0" max="59">
+                        </div>
+                        <p class="quiz-feedback"></p>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="btn-check-time">检查答案</button>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>时间知识总结</h2>
+                <div class="summary-content">
+                    <div class="summary-card">
+                        <h3>🕐 钟面认识</h3>
+                        <ul>
+                            <li>12 个大格</li>
+                            <li>60 个小格</li>
+                            <li>时针短，分针长</li>
+                        </ul>
+                    </div>
+                    <div class="summary-card">
+                        <h3>⏰ 整时</h3>
+                        <ul>
+                            <li>分针指向 12</li>
+                            <li>时针指向几就是几时</li>
+                        </ul>
+                    </div>
+                    <div class="summary-card">
+                        <h3>📝 表示方法</h3>
+                        <ul>
+                            <li>中文：8 时 30 分</li>
+                            <li>电子表：8:30</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="2">
+                <h2>课后练习</h2>
+                <div class="homework-content">
+                    <p class="homework-item">📝 1. 在家里找一找有哪些钟表，认一认它们显示的时间</p>
+                    <p class="homework-item">📝 2. 记录你一天的作息时间：起床、上学、午饭、睡觉等</p>
+                    <p class="homework-item">📝 3. 完成练习册第 7 单元习题</p>
+                    <p class="homework-item">📝 4. 和家长一起玩"报时"游戏：一人拨时间，一人读时间</p>
+                </div>
+                <div class="end-message">
+                    <p>🎉 恭喜你完成了第七单元的学习！</p>
+                    <p>现在你会看时间了，要合理安排时间哦！</p>
+                    <p>⏰ 珍惜时间，做时间的小主人！</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 导航按钮 -->
+        <div class="nav-buttons">
+            <button class="nav-btn prev-btn" id="prevBtn" disabled>上一页</button>
+            <span class="slide-indicator" id="slideIndicator">第 1 页</span>
+            <button class="nav-btn next-btn" id="nextBtn">下一页</button>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

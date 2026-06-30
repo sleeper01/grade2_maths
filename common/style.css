@@ -1,0 +1,231 @@
+/* 通用样式 - 所有单元共享 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 1000px;
+    min-height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 章节和幻灯片 */
+.section {
+    display: none;
+    padding: 40px 50px;
+    min-height: 600px;
+}
+
+.section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+    animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 42px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    color: #444;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.instruction {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* 关键点提示 */
+.key-point {
+    background: linear-gradient(135deg, #FFF3CD 0%, #FFE69C 100%);
+    border-left: 5px solid #FFC107;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-top: 30px;
+    font-size: 18px;
+    color: #856404;
+}
+
+.key-point strong {
+    color: #FF6B00;
+}
+
+/* 标签 */
+.label {
+    font-size: 14px;
+    fill: #666;
+}
+
+/* 导航按钮 */
+.nav-buttons {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.nav-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.prev-btn {
+    background: #f0f0f0;
+    color: #666;
+}
+
+.prev-btn:hover:not(:disabled) {
+    background: #e0e0e0;
+}
+
+.prev-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.next-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.next-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.slide-indicator {
+    font-size: 14px;
+    color: #999;
+}
+
+/* 通用按钮 */
+.btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-secondary {
+    background: #f0f0f0;
+    color: #666;
+}
+
+.btn-secondary:hover {
+    background: #e0e0e0;
+}
+
+/* 封面图片容器 */
+.cover-image {
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .container {
+        border-radius: 10px;
+    }
+    
+    .section {
+        padding: 30px 25px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 26px;
+    }
+    
+    .nav-buttons {
+        padding: 0 25px;
+        bottom: 20px;
+    }
+    
+    .nav-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}

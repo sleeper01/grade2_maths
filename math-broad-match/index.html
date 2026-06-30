@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- v20260630 - 第 8 单元 数学广角 - 搭配问题 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二年级数学 - 数学广角：搭配问题</title>
+    <link rel="stylesheet" href="../common/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Section 0: 封面 -->
+        <section class="section active" data-section="0">
+            <div class="slide active" data-slide="0">
+                <h1>数学广角</h1>
+                <p class="subtitle">搭配问题</p>
+                <div class="cover-image">
+                    <svg viewBox="0 0 250 250" class="cover-match-svg">
+                        <rect x="30" y="50" width="60" height="80" fill="#FFB74D" stroke="#F57C00" stroke-width="2" rx="5"/>
+                        <rect x="160" y="50" width="60" height="80" fill="#4FC3F7" stroke="#0288D1" stroke-width="2" rx="5"/>
+                        <rect x="50" y="150" width="50" height="60" fill="#81C784" stroke="#388E3C" stroke-width="2" rx="3"/>
+                        <rect x="150" y="150" width="50" height="60" fill="#BA68C8" stroke="#7B1FA2" stroke-width="2" rx="3"/>
+                        <line x1="80" y1="130" x2="80" y2="150" stroke="#F57C00" stroke-width="2" stroke-dasharray="4"/>
+                        <line x1="80" y1="130" x2="175" y2="150" stroke="#F57C00" stroke-width="2" stroke-dasharray="4"/>
+                        <line x1="190" y1="130" x2="80" y2="150" stroke="#0288D1" stroke-width="2" stroke-dasharray="4"/>
+                        <line x1="190" y1="130" x2="175" y2="150" stroke="#0288D1" stroke-width="2" stroke-dasharray="4"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: 情境导入 -->
+        <section class="section" data-section="1">
+            <div class="slide active" data-slide="0">
+                <h2>生活中的搭配</h2>
+                <p class="instruction">小明要去参加生日派对，他有 2 件上衣和 3 条裤子，可以怎样搭配呢？</p>
+                <div class="match-scenario">
+                    <div class="clothing-items">
+                        <div class="item-column">
+                            <h3>上衣</h3>
+                            <div class="clothing-item top" data-id="top1">
+                                <svg viewBox="0 0 80 80" class="clothes-svg">
+                                    <path d="M20,20 L60,20 L70,30 L65,70 L15,70 L10,30 Z" fill="#FFB74D" stroke="#F57C00" stroke-width="2"/>
+                                </svg>
+                                <span>黄色上衣</span>
+                            </div>
+                            <div class="clothing-item top" data-id="top2">
+                                <svg viewBox="0 0 80 80" class="clothes-svg">
+                                    <path d="M20,20 L60,20 L70,30 L65,70 L15,70 L10,30 Z" fill="#4FC3F7" stroke="#0288D1" stroke-width="2"/>
+                                </svg>
+                                <span>蓝色上衣</span>
+                            </div>
+                        </div>
+                        <div class="match-lines" id="match-lines-svg">
+                            <svg viewBox="0 0 200 200"></svg>
+                        </div>
+                        <div class="item-column">
+                            <h3>裤子</h3>
+                            <div class="clothing-item pants" data-id="pants1">
+                                <svg viewBox="0 0 60 80" class="pants-svg">
+                                    <rect x="10" y="10" width="40" height="70" fill="#81C784" stroke="#388E3C" stroke-width="2" rx="3"/>
+                                    <line x1="30" y1="10" x2="30" y2="80" stroke="#388E3C" stroke-width="2"/>
+                                </svg>
+                                <span>绿色裤子</span>
+                            </div>
+                            <div class="clothing-item pants" data-id="pants2">
+                                <svg viewBox="0 0 60 80" class="pants-svg">
+                                    <rect x="10" y="10" width="40" height="70" fill="#BA68C8" stroke="#7B1FA2" stroke-width="2" rx="3"/>
+                                    <line x1="30" y1="10" x2="30" y2="80" stroke="#7B1FA2" stroke-width="2"/>
+                                </svg>
+                                <span>紫色裤子</span>
+                            </div>
+                            <div class="clothing-item pants" data-id="pants3">
+                                <svg viewBox="0 0 60 80" class="pants-svg">
+                                    <rect x="10" y="10" width="40" height="70" fill="#FFD54F" stroke="#FFA000" stroke-width="2" rx="3"/>
+                                    <line x1="30" y1="10" x2="30" y2="80" stroke="#FFA000" stroke-width="2"/>
+                                </svg>
+                                <span>黄色裤子</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="key-point">
+                    <strong>思考：</strong>一共有多少种不同的搭配方法？
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>搭配方法</h2>
+                <p class="instruction">我们可以用连线的方法来表示搭配</p>
+                <div class="match-diagram">
+                    <div class="match-column">
+                        <h3>上衣</h3>
+                        <div class="match-item" id="topA">
+                            <span class="item-icon">👕</span>
+                            <span>黄色上衣</span>
+                        </div>
+                        <div class="match-item" id="topB">
+                            <span class="item-icon">👕</span>
+                            <span>蓝色上衣</span>
+                        </div>
+                    </div>
+                    <div class="match-connector">
+                        <svg viewBox="0 0 100 200" id="connection-svg">
+                            <line x1="50" y1="40" x2="50" y2="60" stroke="#F57C00" stroke-width="2"/>
+                            <line x1="50" y1="40" x2="50" y2="100" stroke="#F57C00" stroke-width="2"/>
+                            <line x1="50" y1="40" x2="50" y2="140" stroke="#F57C00" stroke-width="2"/>
+                            <line x1="50" y1="160" x2="50" y2="60" stroke="#0288D1" stroke-width="2"/>
+                            <line x1="50" y1="160" x2="50" y2="100" stroke="#0288D1" stroke-width="2"/>
+                            <line x1="50" y1="160" x2="50" y2="140" stroke="#0288D1" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="match-column">
+                        <h3>裤子</h3>
+                        <div class="match-item" id="pantsA">
+                            <span class="item-icon">👖</span>
+                            <span>绿色裤子</span>
+                        </div>
+                        <div class="match-item" id="pantsB">
+                            <span class="item-icon">👖</span>
+                            <span>紫色裤子</span>
+                        </div>
+                        <div class="match-item" id="pantsC">
+                            <span class="item-icon">👖</span>
+                            <span>黄色裤子</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="match-result">
+                    <p><strong>计算方法：</strong>2 件上衣 × 3 条裤子 = <span class="highlight">6 种</span>搭配</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 食物搭配 -->
+        <section class="section" data-section="2">
+            <div class="slide active" data-slide="0">
+                <h2>早餐搭配</h2>
+                <p class="instruction">早餐有 3 种主食和 2 种饮品，可以怎样搭配？</p>
+                <div class="food-match">
+                    <div class="food-category">
+                        <h3>主食</h3>
+                        <div class="food-item" data-type="main" data-id="main1">
+                            <span class="food-emoji">🥪</span>
+                            <span>三明治</span>
+                        </div>
+                        <div class="food-item" data-type="main" data-id="main2">
+                            <span class="food-emoji">🥐</span>
+                            <span>面包</span>
+                        </div>
+                        <div class="food-item" data-type="main" data-id="main3">
+                            <span class="food-emoji">🥟</span>
+                            <span>包子</span>
+                        </div>
+                    </div>
+                    <div class="food-category">
+                        <h3>饮品</h3>
+                        <div class="food-item" data-type="drink" data-id="drink1">
+                            <span class="food-emoji">🥛</span>
+                            <span>牛奶</span>
+                        </div>
+                        <div class="food-item" data-type="drink" data-id="drink2">
+                            <span class="food-emoji">🧃</span>
+                            <span>果汁</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="interactive-area">
+                    <button class="action-btn" id="show-food-match">显示搭配连线</button>
+                    <div class="match-count" id="food-match-count"></div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>搭配规律</h2>
+                <p class="instruction">发现搭配的规律了吗？</p>
+                <div class="rule-cards">
+                    <div class="rule-card">
+                        <div class="rule-icon">📊</div>
+                        <h3>乘法原理</h3>
+                        <p>第一类有 m 种，第二类有 n 种，搭配总数 = m × n</p>
+                    </div>
+                    <div class="rule-card">
+                        <div class="rule-icon">🔗</div>
+                        <h3>有序搭配</h3>
+                        <p>按照一定顺序连线，不重复、不遗漏</p>
+                    </div>
+                    <div class="rule-card">
+                        <div class="rule-icon">✅</div>
+                        <h3>验证方法</h3>
+                        <p>可以用列举法一一列出所有搭配</p>
+                    </div>
+                </div>
+                <div class="example-box">
+                    <p><strong>例子：</strong>3 种主食 × 2 种饮品 = <strong>6 种</strong>早餐搭配</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 数字排列 -->
+        <section class="section" data-section="3">
+            <div class="slide active" data-slide="0">
+                <h2>数字排列</h2>
+                <p class="instruction">用 1、2、3 三个数字，能组成多少个不同的两位数？</p>
+                <div class="number-permutation">
+                    <div class="number-cards">
+                        <div class="number-card" data-num="1">1</div>
+                        <div class="number-card" data-num="2">2</div>
+                        <div class="number-card" data-num="3">3</div>
+                    </div>
+                    <div class="permutation-result" id="permutation-result">
+                        <p class="result-title">组成的两位数有：</p>
+                        <div class="result-numbers"></div>
+                    </div>
+                </div>
+                <div class="interactive-area">
+                    <button class="action-btn" id="generate-numbers">生成所有两位数</button>
+                </div>
+                <div class="key-point">
+                    <strong>提示：</strong>十位和个位不能相同
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>排列方法</h2>
+                <p class="instruction">按照一定顺序排列，不重复、不遗漏</p>
+                <div class="permutation-tree">
+                    <h3>树形图表示</h3>
+                    <div class="tree-diagram">
+                        <div class="tree-level">
+                            <div class="tree-node root">十位</div>
+                        </div>
+                        <div class="tree-level">
+                            <div class="tree-node num-1">1</div>
+                            <div class="tree-node num-2">2</div>
+                            <div class="tree-node num-3">3</div>
+                        </div>
+                        <div class="tree-level">
+                            <div class="tree-subnodes">
+                                <div class="tree-node sub">2 → 12</div>
+                                <div class="tree-node sub">3 → 13</div>
+                            </div>
+                            <div class="tree-subnodes">
+                                <div class="tree-node sub">1 → 21</div>
+                                <div class="tree-node sub">3 → 23</div>
+                            </div>
+                            <div class="tree-subnodes">
+                                <div class="tree-node sub">1 → 31</div>
+                                <div class="tree-node sub">2 → 32</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="result-summary">
+                    <p>一共可以组成 <span class="highlight">6</span> 个不同的两位数</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: 握手问题 -->
+        <section class="section" data-section="4">
+            <div class="slide active" data-slide="0">
+                <h2>握手问题</h2>
+                <p class="instruction">3 个小朋友见面，每两人握一次手，一共要握几次手？</p>
+                <div class="handshake-scenario">
+                    <div class="people-group">
+                        <div class="person" id="person1">
+                            <div class="person-avatar">👦</div>
+                            <span>小明</span>
+                        </div>
+                        <div class="person" id="person2">
+                            <div class="person-avatar">👧</div>
+                            <span>小红</span>
+                        </div>
+                        <div class="person" id="person3">
+                            <div class="person-avatar">👦</div>
+                            <span>小刚</span>
+                        </div>
+                    </div>
+                    <div class="handshake-svg">
+                        <svg viewBox="0 0 300 200" id="handshake-svg">
+                            <circle cx="80" cy="100" r="30" fill="#FFB74D" stroke="#F57C00" stroke-width="2"/>
+                            <circle cx="220" cy="100" r="30" fill="#4FC3F7" stroke="#0288D1" stroke-width="2"/>
+                            <circle cx="150" cy="170" r="30" fill="#81C784" stroke="#388E3C" stroke-width="2"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="interactive-area">
+                    <button class="action-btn" id="show-handshake">显示握手连线</button>
+                    <div class="match-count" id="handshake-count"></div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>握手问题的解法</h2>
+                <p class="instruction">每两人握一次手，不能重复计算</p>
+                <div class="handshake-method">
+                    <div class="method-step">
+                        <span class="step-num">1</span>
+                        <p>小明分别和小红、小刚握手 → <strong>2 次</strong></p>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-num">2</span>
+                        <p>小红和小刚握手（和小明已握过） → <strong>1 次</strong></p>
+                    </div>
+                    <div class="method-step">
+                        <span class="step-num">3</span>
+                        <p>小刚已经和所有人都握过了 → <strong>0 次</strong></p>
+                    </div>
+                </div>
+                <div class="result-summary">
+                    <p>一共握手：<strong>2 + 1 = 3 次</strong></p>
+                </div>
+                <div class="key-point">
+                    <strong>规律：</strong>n 个人握手，总次数 = (n-1) + (n-2) + ... + 1
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: 练习与巩固 -->
+        <section class="section" data-section="5">
+            <div class="slide active" data-slide="0">
+                <h2>练习题 1：衣服搭配</h2>
+                <p class="instruction">如果有 3 件上衣和 2 条裤子，一共有多少种搭配方法？</p>
+                <div class="quiz-options" id="quiz1">
+                    <button class="option-btn" data-answer="A">A. 4 种</button>
+                    <button class="option-btn" data-answer="B">B. 5 种</button>
+                    <button class="option-btn" data-answer="C">C. 6 种</button>
+                    <button class="option-btn" data-answer="D">D. 7 种</button>
+                </div>
+                <div class="feedback" id="feedback1"></div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>练习题 2：数字组合</h2>
+                <p class="instruction">用 5、7、9 三个数字，能组成多少个不同的两位数？</p>
+                <div class="quiz-options" id="quiz2">
+                    <button class="option-btn" data-answer="A">A. 3 个</button>
+                    <button class="option-btn" data-answer="B">B. 4 个</button>
+                    <button class="option-btn" data-answer="C">C. 5 个</button>
+                    <button class="option-btn" data-answer="D">D. 6 个</button>
+                </div>
+                <div class="feedback" id="feedback2"></div>
+            </div>
+            <div class="slide" data-slide="2">
+                <h2>练习题 3：拍照排队</h2>
+                <p class="instruction">3 个小朋友站成一排拍照，有多少种不同的站法？</p>
+                <div class="quiz-options" id="quiz3">
+                    <button class="option-btn" data-answer="A">A. 3 种</button>
+                    <button class="option-btn" data-answer="B">B. 4 种</button>
+                    <button class="option-btn" data-answer="C">C. 5 种</button>
+                    <button class="option-btn" data-answer="D">D. 6 种</button>
+                </div>
+                <div class="feedback" id="feedback3"></div>
+            </div>
+            <div class="slide" data-slide="3">
+                <h2>练习题 4：路线选择</h2>
+                <p class="instruction">从 A 地到 B 地有 2 条路，从 B 地到 C 地有 3 条路，从 A 到 C 有几种走法？</p>
+                <div class="route-diagram">
+                    <div class="route-point">A</div>
+                    <div class="route-lines">
+                        <span class="route-line">2 条</span>
+                    </div>
+                    <div class="route-point">B</div>
+                    <div class="route-lines">
+                        <span class="route-line">3 条</span>
+                    </div>
+                    <div class="route-point">C</div>
+                </div>
+                <div class="quiz-options" id="quiz4">
+                    <button class="option-btn" data-answer="A">A. 5 种</button>
+                    <button class="option-btn" data-answer="B">B. 6 种</button>
+                    <button class="option-btn" data-answer="C">C. 7 种</button>
+                    <button class="option-btn" data-answer="D">D. 8 种</button>
+                </div>
+                <div class="feedback" id="feedback4"></div>
+            </div>
+        </section>
+
+        <!-- Section 6: 总结与提升 -->
+        <section class="section" data-section="6">
+            <div class="slide active" data-slide="0">
+                <h2>本单元总结</h2>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="summary-icon">👕👖</div>
+                        <h3>搭配问题</h3>
+                        <p>用乘法计算：第一类数量 × 第二类数量</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">🔢</div>
+                        <h3>排列问题</h3>
+                        <p>按顺序排列，不重复、不遗漏</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">🤝</div>
+                        <h3>组合问题</h3>
+                        <p>握手、比赛等，注意不重复计算</p>
+                    </div>
+                    <div class="summary-card">
+                        <div class="summary-icon">📊</div>
+                        <h3>解题方法</h3>
+                        <p>连线法、列举法、树形图</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>课后挑战</h2>
+                <div class="challenge-box">
+                    <div class="challenge-item">
+                        <span class="challenge-num">1</span>
+                        <p>用 0、2、4 三个数字能组成多少个不同的两位数？（提示：0 不能在十位）</p>
+                    </div>
+                    <div class="challenge-item">
+                        <span class="challenge-num">2</span>
+                        <p>4 个小朋友见面，每两人握一次手，一共要握几次手？</p>
+                    </div>
+                    <div class="challenge-item">
+                        <span class="challenge-num">3</span>
+                        <p>有 2 件上衣、3 条裤子和 2 双鞋子，一共有多少种不同的穿法？</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 导航按钮 -->
+    <div class="nav-buttons">
+        <button class="nav-btn prev-btn" id="prevBtn">上一页</button>
+        <div class="page-indicator">
+            <span id="currentSlide">1</span> / <span id="totalSlides">12</span>
+        </div>
+        <button class="nav-btn next-btn" id="nextBtn">下一页</button>
+    </div>
+
+    <script src="../common/script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

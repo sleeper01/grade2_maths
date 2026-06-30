@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- v20260629 - 第 4 单元 表内乘法 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二年级数学 - 表内乘法（一）</title>
+    <link rel="stylesheet" href="../common/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Section 0: 封面 -->
+        <section class="section active" data-section="0">
+            <div class="slide active" data-slide="0">
+                <h1>表内乘法（一）</h1>
+                <p class="subtitle">二年级数学 第四单元</p>
+                <div class="cover-image">
+                    <svg viewBox="0 0 200 200" class="cover-multiplication-svg">
+                        <circle cx="100" cy="100" r="80" fill="#E8F5E9" stroke="#4CAF50" stroke-width="3"/>
+                        <g class="group-items">
+                            <circle cx="60" cy="70" r="12" fill="#FF7043"/>
+                            <circle cx="90" cy="70" r="12" fill="#FF7043"/>
+                            <circle cx="120" cy="70" r="12" fill="#FF7043"/>
+                            <circle cx="60" cy="110" r="12" fill="#FF7043"/>
+                            <circle cx="90" cy="110" r="12" fill="#FF7043"/>
+                            <circle cx="120" cy="110" r="12" fill="#FF7043"/>
+                        </g>
+                        <text x="100" y="160" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">3 × 2 = 6</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: 相同加数相加 -->
+        <section class="section" data-section="1">
+            <div class="slide active" data-slide="0">
+                <h2>算一算：一共有多少个？</h2>
+                <p class="instruction">观察下面的图形，列出加法算式</p>
+                <div class="same-addend-examples">
+                    <div class="addend-card">
+                        <svg viewBox="0 0 150 120">
+                            <rect x="20" y="30" width="40" height="30" fill="#FFCDD2" stroke="#F44336" stroke-width="2"/>
+                            <text x="40" y="50" text-anchor="middle" fill="#F44336" font-weight="bold">3</text>
+                            <rect x="55" y="30" width="40" height="30" fill="#FFCDD2" stroke="#F44336" stroke-width="2"/>
+                            <text x="75" y="50" text-anchor="middle" fill="#F44336" font-weight="bold">3</text>
+                            <rect x="90" y="30" width="40" height="30" fill="#FFCDD2" stroke="#F44336" stroke-width="2"/>
+                            <text x="110" y="50" text-anchor="middle" fill="#F44336" font-weight="bold">3</text>
+                        </svg>
+                        <p>3 + 3 + 3 = 9</p>
+                        <span class="addend-note">3 个 3</span>
+                    </div>
+                    <div class="addend-card">
+                        <svg viewBox="0 0 150 120">
+                            <circle cx="40" cy="50" r="20" fill="#C8E6C9" stroke="#4CAF50" stroke-width="2"/>
+                            <text x="40" y="55" text-anchor="middle" fill="#4CAF50" font-weight="bold">5</text>
+                            <circle cx="110" cy="50" r="20" fill="#C8E6C9" stroke="#4CAF50" stroke-width="2"/>
+                            <text x="110" y="55" text-anchor="middle" fill="#4CAF50" font-weight="bold">5</text>
+                        </svg>
+                        <p>5 + 5 = 10</p>
+                        <span class="addend-note">2 个 5</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>找一找：相同加数</h2>
+                <p class="instruction">这些加法算式有什么共同特点？</p>
+                <div class="addend-compare">
+                    <div class="addend-type same">
+                        <h3>✓ 加数相同</h3>
+                        <ul>
+                            <li>2 + 2 + 2 + 2 = 8</li>
+                            <li>4 + 4 + 4 = 12</li>
+                            <li>5 + 5 + 5 + 5 + 5 = 25</li>
+                        </ul>
+                    </div>
+                    <div class="addend-type different">
+                        <h3>✗ 加数不同</h3>
+                        <ul>
+                            <li>3 + 4 + 5 = 12</li>
+                            <li>2 + 2 + 3 = 7</li>
+                            <li>1 + 2 + 3 + 4 = 10</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="key-point">
+                    <strong>发现：</strong>加数都相同的加法，可以用更简便的方法计算
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: 认识乘法 -->
+        <section class="section" data-section="2">
+            <div class="slide active" data-slide="0">
+                <h2>认识乘法</h2>
+                <p class="instruction">相同加数相加，可以用乘法表示</p>
+                <div class="multiplication-intro">
+                    <div class="intro-example">
+                        <svg viewBox="0 0 300 150">
+                            <g class="item-group">
+                                <circle cx="40" cy="50" r="15" fill="#2196F3"/>
+                                <circle cx="80" cy="50" r="15" fill="#2196F3"/>
+                                <circle cx="120" cy="50" r="15" fill="#2196F3"/>
+                                <circle cx="160" cy="50" r="15" fill="#2196F3"/>
+                            </g>
+                            <text x="100" y="100" text-anchor="middle" font-size="18" fill="#333">4 + 4 = 8</text>
+                            <text x="100" y="130" text-anchor="middle" font-size="18" fill="#F44336" font-weight="bold">2 × 4 = 8</text>
+                        </svg>
+                        <p><strong>2 × 4 = 8</strong> 读作：2 乘 4 等于 8</p>
+                    </div>
+                </div>
+                <div class="key-point">
+                    <strong>乘号（×）：</strong>像一个小叉，表示几个相同加数相加
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>乘法的各部分名称</h2>
+                <div class="multiplication-parts">
+                    <svg viewBox="0 0 400 200">
+                        <text x="80" y="80" font-size="40" fill="#333" font-weight="bold">2</text>
+                        <text x="140" y="80" font-size="40" fill="#F44336" font-weight="bold">×</text>
+                        <text x="200" y="80" font-size="40" fill="#333" font-weight="bold">4</text>
+                        <text x="260" y="80" font-size="40" fill="#333" font-weight="bold">=</text>
+                        <text x="320" y="80" font-size="40" fill="#4CAF50" font-weight="bold">8</text>
+                        
+                        <line x1="80" y1="110" x2="80" y2="140" stroke="#2196F3" stroke-width="2"/>
+                        <text x="80" y="165" text-anchor="middle" font-size="14" fill="#2196F3">乘数</text>
+                        
+                        <line x1="200" y1="110" x2="200" y2="140" stroke="#FF9800" stroke-width="2"/>
+                        <text x="200" y="165" text-anchor="middle" font-size="14" fill="#FF9800">乘数</text>
+                        
+                        <line x1="320" y1="110" x2="320" y2="140" stroke="#4CAF50" stroke-width="2"/>
+                        <text x="320" y="165" text-anchor="middle" font-size="14" fill="#4CAF50">积</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="slide" data-slide="2">
+                <h2>把加法改写成乘法</h2>
+                <div class="rewrite-examples">
+                    <div class="rewrite-card">
+                        <p class="original">3 + 3 + 3 + 3 = 12</p>
+                        <p class="converted">4 × 3 = 12</p>
+                        <span class="explanation">4 个 3 相加</span>
+                    </div>
+                    <div class="rewrite-card">
+                        <p class="original">5 + 5 + 5 = 15</p>
+                        <p class="converted">3 × 5 = 15</p>
+                        <span class="explanation">3 个 5 相加</span>
+                    </div>
+                    <div class="rewrite-card">
+                        <p class="original">2 + 2 + 2 + 2 + 2 = 10</p>
+                        <p class="converted">5 × 2 = 10</p>
+                        <span class="explanation">5 个 2 相加</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: 乘法的意义 -->
+        <section class="section" data-section="3">
+            <div class="slide active" data-slide="0">
+                <h2>几个几相加</h2>
+                <p class="instruction">看图说乘法算式</p>
+                <div class="meaning-examples">
+                    <!-- 左图：2 个盘子，每盘 4 个苹果 = 2 个 4 -->
+                    <div class="meaning-card">
+                        <svg viewBox="0 0 180 120">
+                            <!-- 盘子 1 -->
+                            <ellipse cx="50" cy="50" rx="35" ry="25" fill="#FFF3CD" stroke="#FFC107" stroke-width="2"/>
+                            <text x="35" y="55" font-size="14">🍎</text>
+                            <text x="50" y="55" font-size="14">🍎</text>
+                            <text x="65" y="55" font-size="14">🍎</text>
+                            <text x="42" y="68" font-size="14">🍎</text>
+                            <!-- 盘子 2 -->
+                            <ellipse cx="130" cy="50" rx="35" ry="25" fill="#FFF3CD" stroke="#FFC107" stroke-width="2"/>
+                            <text x="115" y="55" font-size="14">🍎</text>
+                            <text x="130" y="55" font-size="14">🍎</text>
+                            <text x="145" y="55" font-size="14">🍎</text>
+                            <text x="122" y="68" font-size="14">🍎</text>
+                        </svg>
+                        <p>2 个 4</p>
+                        <p class="equation">2 × 4 = 8</p>
+                    </div>
+                    <!-- 右图：3 个鱼缸，每个 3 条鱼 = 3 个 3 -->
+                    <div class="meaning-card">
+                        <svg viewBox="0 0 180 120">
+                            <!-- 鱼缸 1 -->
+                            <circle cx="40" cy="40" r="22" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+                            <text x="32" y="42" font-size="12">🐟</text>
+                            <text x="42" y="42" font-size="12">🐟</text>
+                            <text x="37" y="52" font-size="12">🐟</text>
+                            <!-- 鱼缸 2 -->
+                            <circle cx="90" cy="40" r="22" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+                            <text x="82" y="42" font-size="12">🐟</text>
+                            <text x="92" y="42" font-size="12">🐟</text>
+                            <text x="87" y="52" font-size="12">🐟</text>
+                            <!-- 鱼缸 3 -->
+                            <circle cx="140" cy="40" r="22" fill="#E3F2FD" stroke="#2196F3" stroke-width="2"/>
+                            <text x="132" y="42" font-size="12">🐟</text>
+                            <text x="142" y="42" font-size="12">🐟</text>
+                            <text x="137" y="52" font-size="12">🐟</text>
+                        </svg>
+                        <p>3 个 3</p>
+                        <p class="equation">3 × 3 = 9</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>看图列式</h2>
+                <div class="picture-problems">
+                    <!-- 第 1 题：4 束花，每束 5 朵 -->
+                    <div class="problem-card">
+                        <svg viewBox="0 0 220 140">
+                            <!-- 花束 1 -->
+                            <g transform="translate(20, 20)">
+                                <line x1="15" y1="40" x2="15" y2="60" stroke="#4CAF50" stroke-width="2"/>
+                                <circle cx="10" cy="35" r="8" fill="#F48FB1"/>
+                                <circle cx="20" cy="35" r="8" fill="#F48FB1"/>
+                                <circle cx="15" cy="28" r="8" fill="#F48FB1"/>
+                                <circle cx="8" cy="42" r="8" fill="#F48FB1"/>
+                                <circle cx="22" cy="42" r="8" fill="#F48FB1"/>
+                            </g>
+                            <!-- 花束 2 -->
+                            <g transform="translate(70, 20)">
+                                <line x1="15" y1="40" x2="15" y2="60" stroke="#4CAF50" stroke-width="2"/>
+                                <circle cx="10" cy="35" r="8" fill="#F48FB1"/>
+                                <circle cx="20" cy="35" r="8" fill="#F48FB1"/>
+                                <circle cx="15" cy="28" r="8" fill="#F48FB1"/>
+                                <circle cx="8" cy="42" r="8" fill="#F48FB1"/>
+                                <circle cx="22" cy="42" r="8" fill="#F48FB1"/>
+                            </g>
+                            <!-- 花束 3 -->
+                            <g transform="translate(120, 20)">
+                                <line x1="15" y1="40" x2="15" y2="60" stroke="#4CAF50" stroke-width="2"/>
+                                <circle cx="10" cy="35" r="8" fill="#F48FB1"/>
+                                <circle cx="20" cy="35" r="8" fill="#F48FB1"/>
+                                <circle cx="15" cy="28" r="8" fill="#F48FB1"/>
+                                <circle cx="8" cy="42" r="8" fill="#F48FB1"/>
+                                <circle cx="22" cy="42" r="8" fill="#F48FB1"/>
+                            </g>
+                            <!-- 花束 4 -->
+                            <g transform="translate(170, 20)">
+                                <line x1="15" y1="40" x2="15" y2="60" stroke="#4CAF50" stroke-width="2"/>
+                                <circle cx="10" cy="35" r="8" fill="#F48FB1"/>
+                                <circle cx="20" cy="35" r="8" fill="#F48FB1"/>
+                                <circle cx="15" cy="28" r="8" fill="#F48FB1"/>
+                                <circle cx="8" cy="42" r="8" fill="#F48FB1"/>
+                                <circle cx="22" cy="42" r="8" fill="#F48FB1"/>
+                            </g>
+                            <text x="110" y="110" text-anchor="middle" font-size="13" fill="#666">每束 5 朵，有 4 束</text>
+                        </svg>
+                        <div class="problem-input">
+                            <input type="number" class="problem-num1" placeholder="?" min="1" max="9"> × 
+                            <input type="number" class="problem-num2" placeholder="?" min="1" max="9"> = 
+                            <input type="number" class="problem-result" placeholder="?" min="1" max="99">
+                        </div>
+                    </div>
+                    <!-- 第 2 题：5 串气球，每串 3 个 -->
+                    <div class="problem-card">
+                        <svg viewBox="0 0 220 140">
+                            <!-- 气球串 1 -->
+                            <g transform="translate(15, 15)">
+                                <line x1="15" y1="50" x2="15" y2="70" stroke="#999" stroke-width="1.5"/>
+                                <circle cx="10" cy="25" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                                <circle cx="20" cy="25" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                                <circle cx="15" cy="40" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                            </g>
+                            <!-- 气球串 2 -->
+                            <g transform="translate(55, 15)">
+                                <line x1="15" y1="50" x2="15" y2="70" stroke="#999" stroke-width="1.5"/>
+                                <circle cx="10" cy="25" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                                <circle cx="20" cy="25" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                                <circle cx="15" cy="40" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                            </g>
+                            <!-- 气球串 3 -->
+                            <g transform="translate(95, 15)">
+                                <line x1="15" y1="50" x2="15" y2="70" stroke="#999" stroke-width="1.5"/>
+                                <circle cx="10" cy="25" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                                <circle cx="20" cy="25" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                                <circle cx="15" cy="40" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                            </g>
+                            <!-- 气球串 4 -->
+                            <g transform="translate(135, 15)">
+                                <line x1="15" y1="50" x2="15" y2="70" stroke="#999" stroke-width="1.5"/>
+                                <circle cx="10" cy="25" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                                <circle cx="20" cy="25" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                                <circle cx="15" cy="40" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                            </g>
+                            <!-- 气球串 5 -->
+                            <g transform="translate(175, 15)">
+                                <line x1="15" y1="50" x2="15" y2="70" stroke="#999" stroke-width="1.5"/>
+                                <circle cx="10" cy="25" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                                <circle cx="20" cy="25" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                                <circle cx="15" cy="40" r="10" fill="#B3E5FC" stroke="#03A9F4" stroke-width="1.5"/>
+                            </g>
+                            <text x="110" y="115" text-anchor="middle" font-size="13" fill="#666">每串 3 个，有 5 串</text>
+                        </svg>
+                        <div class="problem-input">
+                            <input type="number" class="problem-num1" placeholder="?" min="1" max="9"> × 
+                            <input type="number" class="problem-num2" placeholder="?" min="1" max="9"> = 
+                            <input type="number" class="problem-result" placeholder="?" min="1" max="99">
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="btn-check-problems">检查答案</button>
+                <p class="feedback" id="problems-feedback"></p>
+            </div>
+        </section>
+
+        <!-- Section 4: 2-6 的乘法口诀 -->
+        <section class="section" data-section="4">
+            <div class="slide active" data-slide="0">
+                <h2>2 的乘法口诀</h2>
+                <div class="koujue-card koujue-2">
+                    <div class="koujue-row">
+                        <span class="koujue-text">一二得二</span>
+                        <span class="koujue-equation">1 × 2 = 2</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">二二得四</span>
+                        <span class="koujue-equation">2 × 2 = 4</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">二三得六</span>
+                        <span class="koujue-equation">2 × 3 = 6</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">二四得八</span>
+                        <span class="koujue-equation">2 × 4 = 8</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">二五一十</span>
+                        <span class="koujue-equation">2 × 5 = 10</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">二六十二</span>
+                        <span class="koujue-equation">2 × 6 = 12</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>3 的乘法口诀</h2>
+                <div class="koujue-card koujue-3">
+                    <div class="koujue-row">
+                        <span class="koujue-text">一三得三</span>
+                        <span class="koujue-equation">1 × 3 = 3</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">二三得六</span>
+                        <span class="koujue-equation">2 × 3 = 6</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">三三得九</span>
+                        <span class="koujue-equation">3 × 3 = 9</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">三四十二</span>
+                        <span class="koujue-equation">3 × 4 = 12</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">三五十五</span>
+                        <span class="koujue-equation">3 × 5 = 15</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">三六十八</span>
+                        <span class="koujue-equation">3 × 6 = 18</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="2">
+                <h2>4 的乘法口诀</h2>
+                <div class="koujue-card koujue-4">
+                    <div class="koujue-row">
+                        <span class="koujue-text">一四得四</span>
+                        <span class="koujue-equation">1 × 4 = 4</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">二四得八</span>
+                        <span class="koujue-equation">2 × 4 = 8</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">三四十二</span>
+                        <span class="koujue-equation">3 × 4 = 12</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">四四十六</span>
+                        <span class="koujue-equation">4 × 4 = 16</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">四五二十</span>
+                        <span class="koujue-equation">4 × 5 = 20</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">四六二十四</span>
+                        <span class="koujue-equation">4 × 6 = 24</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="3">
+                <h2>5 的乘法口诀</h2>
+                <div class="koujue-card koujue-5">
+                    <div class="koujue-row">
+                        <span class="koujue-text">一五得五</span>
+                        <span class="koujue-equation">1 × 5 = 5</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">二五一十</span>
+                        <span class="koujue-equation">2 × 5 = 10</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">三五十五</span>
+                        <span class="koujue-equation">3 × 5 = 15</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">四五二十</span>
+                        <span class="koujue-equation">4 × 5 = 20</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">五五二十五</span>
+                        <span class="koujue-equation">5 × 5 = 25</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">五六三十</span>
+                        <span class="koujue-equation">5 × 6 = 30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="4">
+                <h2>6 的乘法口诀</h2>
+                <div class="koujue-card koujue-6">
+                    <div class="koujue-row">
+                        <span class="koujue-text">一六得六</span>
+                        <span class="koujue-equation">1 × 6 = 6</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">二六十二</span>
+                        <span class="koujue-equation">2 × 6 = 12</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">三六十八</span>
+                        <span class="koujue-equation">3 × 6 = 18</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">四六二十四</span>
+                        <span class="koujue-equation">4 × 6 = 24</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">五六三十</span>
+                        <span class="koujue-equation">5 × 6 = 30</span>
+                    </div>
+                    <div class="koujue-row">
+                        <span class="koujue-text">六六三十六</span>
+                        <span class="koujue-equation">6 × 6 = 36</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: 练习与总结 -->
+        <section class="section" data-section="5">
+            <div class="slide active" data-slide="0">
+                <h2>对口令：乘法口诀</h2>
+                <div class="koujue-quiz">
+                    <div class="quiz-question">
+                        <p class="question-text">二三得？</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-answer="六">六</button>
+                            <button class="quiz-option" data-answer="八">八</button>
+                            <button class="quiz-option" data-answer="九">九</button>
+                        </div>
+                        <p class="quiz-feedback"></p>
+                    </div>
+                    <div class="quiz-question">
+                        <p class="question-text">四五？</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-answer="十五">十五</button>
+                            <button class="quiz-option" data-answer="二十">二十</button>
+                            <button class="quiz-option" data-answer="二十五">二十五</button>
+                        </div>
+                        <p class="quiz-feedback"></p>
+                    </div>
+                    <div class="quiz-question">
+                        <p class="question-text">三六？</p>
+                        <div class="quiz-options">
+                            <button class="quiz-option" data-answer="二十四">二十四</button>
+                            <button class="quiz-option" data-answer="三十">三十</button>
+                            <button class="quiz-option" data-answer="十八">十八</button>
+                        </div>
+                        <p class="quiz-feedback"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="1">
+                <h2>计算小能手</h2>
+                <div class="calculation-quiz">
+                    <div class="calc-problem">
+                        <span class="problem">2 × 3 = </span>
+                        <input type="number" class="calc-input" data-answer="6" min="0" max="99">
+                    </div>
+                    <div class="calc-problem">
+                        <span class="problem">4 × 5 = </span>
+                        <input type="number" class="calc-input" data-answer="20" min="0" max="99">
+                    </div>
+                    <div class="calc-problem">
+                        <span class="problem">3 × 6 = </span>
+                        <input type="number" class="calc-input" data-answer="18" min="0" max="99">
+                    </div>
+                    <div class="calc-problem">
+                        <span class="problem">5 × 5 = </span>
+                        <input type="number" class="calc-input" data-answer="25" min="0" max="99">
+                    </div>
+                    <div class="calc-problem">
+                        <span class="problem">6 × 4 = </span>
+                        <input type="number" class="calc-input" data-answer="24" min="0" max="99">
+                    </div>
+                    <div class="calc-problem">
+                        <span class="problem">3 × 3 = </span>
+                        <input type="number" class="calc-input" data-answer="9" min="0" max="99">
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="btn-check-calc">检查答案</button>
+                <p class="feedback" id="calc-feedback"></p>
+            </div>
+            <div class="slide" data-slide="2">
+                <h2>课堂总结</h2>
+                <div class="summary-content">
+                    <div class="summary-card">
+                        <h3>📌 乘法的意义</h3>
+                        <ul>
+                            <li>求几个相同加数的和</li>
+                            <li>用乘法计算更简便</li>
+                        </ul>
+                    </div>
+                    <div class="summary-card">
+                        <h3>✖️ 乘法算式</h3>
+                        <ul>
+                            <li>乘数 × 乘数 = 积</li>
+                            <li>例如：2 × 4 = 8</li>
+                        </ul>
+                    </div>
+                    <div class="summary-card">
+                        <h3>📖 乘法口诀</h3>
+                        <ul>
+                            <li>2-6 的乘法口诀</li>
+                            <li>熟记口诀，计算更快</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" data-slide="3">
+                <h2>课后练习</h2>
+                <div class="homework-content">
+                    <p class="homework-item">📝 1. 背诵 2-6 的乘法口诀</p>
+                    <p class="homework-item">📝 2. 完成练习册第 4 单元习题</p>
+                    <p class="homework-item">📝 3. 用乘法口诀计算：每天 3 页口算，5 天共多少页？</p>
+                </div>
+                <div class="end-message">
+                    <p>🎉 恭喜你完成了第四单元的学习！</p>
+                    <p>继续加油，成为乘法小达人！</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 导航按钮 -->
+        <div class="nav-buttons">
+            <button class="nav-btn prev-btn" id="prevBtn" disabled>上一页</button>
+            <span class="slide-indicator" id="slideIndicator">第 1 页</span>
+            <button class="nav-btn next-btn" id="nextBtn">下一页</button>
+        </div>
+    </div>
+
+    <script src="../common/script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

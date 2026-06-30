@@ -1,0 +1,553 @@
+/* 观察物体 - 专用样式 */
+
+/* 封面观察图示 */
+.cover-observe-svg {
+    width: 250px;
+    height: 200px;
+    margin: 30px auto;
+}
+
+.object-center {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.view-front, .view-side, .view-top {
+    animation: fadeIn 0.5s ease-out backwards;
+}
+
+.view-front { animation-delay: 0.3s; }
+.view-side { animation-delay: 0.5s; }
+.view-top { animation-delay: 0.7s; }
+
+/* 观察演示 */
+.observe-demo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.demo-object {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.demo-object svg {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+.demo-views {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.view-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.view-card:hover {
+    transform: translateY(-5px);
+}
+
+.view-card svg {
+    width: 100%;
+    height: 100px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.view-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* 观察者场景 */
+.observer-scene {
+    margin: 30px 0;
+}
+
+.scene-svg {
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.center-object {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.observer {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.observer:hover {
+    transform: scale(1.1);
+}
+
+/* 茶壶观察 */
+.teapot-views {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.teapot-main {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.teapot-main svg {
+    width: 100%;
+    height: 150px;
+    display: block;
+}
+
+.teapot-main p {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.teapot-view-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.view-option {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.view-option:hover {
+    border-color: #667eea;
+    transform: translateY(-3px);
+}
+
+.view-option svg {
+    width: 100%;
+    height: 100px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.view-option p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* 小汽车观察 */
+.car-observe {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.car-main {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.car-main svg {
+    width: 100%;
+    height: 150px;
+    display: block;
+}
+
+.car-main p {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.car-views-match {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.match-view {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.match-view:hover {
+    border-color: #667eea;
+    transform: translateY(-3px);
+}
+
+.match-view.selected {
+    border-color: #4CAF50;
+    background: #E8F5E9;
+}
+
+.match-view svg {
+    width: 100%;
+    height: 80px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.match-view p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+/* 组合体观察 */
+.block-combo {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.block-3d {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.block-3d svg {
+    width: 100%;
+    height: 150px;
+    display: block;
+}
+
+.block-3d p {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.block-views {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* 数方块练习 */
+.count-blocks-quiz {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.quiz-block {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.quiz-block svg {
+    width: 100%;
+    height: 120px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.quiz-block p {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.quiz-answer {
+    margin-top: 15px;
+}
+
+.quiz-answer input {
+    width: 50px;
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid #DDD;
+    border-radius: 5px;
+}
+
+.quiz-answer input.correct {
+    border-color: #4CAF50;
+    background: #E8F5E9;
+}
+
+.quiz-answer input.incorrect {
+    border-color: #F44336;
+    background: #FFEBEE;
+}
+
+/* 配对练习 */
+.match-quiz {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.match-object {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.match-object svg {
+    width: 100%;
+    height: 150px;
+    display: block;
+}
+
+.match-object p {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.match-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.match-option {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.match-option:hover {
+    border-color: #667eea;
+    transform: translateY(-3px);
+}
+
+.match-option.selected {
+    border-color: #4CAF50;
+    background: #E8F5E9;
+}
+
+.match-option svg {
+    width: 100%;
+    height: 80px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.match-option p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* 判断对错 */
+.true-false-quiz {
+    margin: 30px 0;
+}
+
+.tf-question {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.tf-question p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.tf-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tf-btn {
+    padding: 10px 25px;
+    font-size: 16px;
+    border: 2px solid #DDD;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tf-btn:hover {
+    background: #F5F5F5;
+}
+
+.tf-btn.correct {
+    background: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+.tf-btn.incorrect {
+    background: #F44336;
+    color: white;
+    border-color: #F44336;
+}
+
+.tf-feedback {
+    margin-top: 10px;
+    font-weight: bold;
+    min-height: 25px;
+}
+
+.tf-feedback.success {
+    color: #4CAF50;
+}
+
+.tf-feedback.error {
+    color: #F44336;
+}
+
+/* 总结内容 */
+.summary-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.summary-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.summary-card h3 {
+    margin: 0 0 15px;
+    font-size: 18px;
+}
+
+.summary-card ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.summary-card li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+/* 课后练习 */
+.homework-content {
+    background: #FFF3CD;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.homework-item {
+    font-size: 16px;
+    margin: 15px 0;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+}
+
+.end-message {
+    background: linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%);
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.end-message p {
+    font-size: 20px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* 反馈信息 */
+.feedback {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 30px;
+    text-align: center;
+}
+
+.feedback.success {
+    color: #4CAF50;
+}
+
+.feedback.error {
+    color: #F44336;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .observe-demo,
+    .teapot-views,
+    .car-observe,
+    .block-combo,
+    .match-quiz {
+        grid-template-columns: 1fr;
+    }
+    
+    .demo-views,
+    .teapot-view-cards,
+    .car-views-match,
+    .block-views,
+    .count-blocks-quiz,
+    .match-options,
+    .summary-content {
+        grid-template-columns: 1fr;
+    }
+}
